@@ -1,0 +1,412 @@
+body {
+  margin: 0;
+  font-family: "Play", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  background-color: #081a35;
+  color: #f4f4f9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s ease-in-out;
+  margin-bottom: 200px;
+  overflow: hidden;
+}
+
+header .image {
+  width: 25%;
+  float: left;
+  display: flex;
+  width: 100px;
+  margin-left: 20px;
+}
+
+.image img {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+header h1 {
+  float: left;
+  display: flex;
+  width: 50%;
+  color: rgb(240, 232, 220);
+  justify-content: center;
+}
+
+/* General Nav Styles */
+.navlinks {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 8px;
+}
+
+.navlinks > nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks > nav > ul > li {
+  position: relative; /* Required for submenu alignment */
+  margin: 0 20px;
+}
+
+/* Parent Menu Links */
+.navlinks > nav > ul > li a {
+  color: #f4f4f9;
+  text-decoration: none;
+  font-size: 1.375rem;
+  padding: 22px 10px;
+  display: inline-block;
+  position: relative; /* For positioning the pseudo-element */
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1;
+}
+
+.navlinks > nav > ul > li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the link */
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Line thickness */
+  background-color: #00e1ff; /* Line color */
+  transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+.navlinks > nav > ul > li:hover > a {
+  color: #00e1ff; /* Change link color on hover */
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+.navlinks > nav > ul > li a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/* Submenu Container */
+.navlinks .submenu {
+  display: none; /* Hide submenu by default */
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 0;
+  background-color: #111;
+  border-radius: 5px;
+  padding: 0;
+  min-width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure it appears above other elements */
+  overflow: visible; /* Ensure submenu is visible */
+}
+
+/* Submenu Items */
+.navlinks .submenu li {
+  list-style: none;
+}
+
+.navlinks .submenu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #f4f4f9;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navlinks .submenu li a:hover {
+  background-color: #00e1ff; /* Highlight color on hover */
+  color: #111;
+}
+
+.navlinks .has-submenu:hover .submenu {
+  display: block !important; /* Ensure it shows on hover */
+}
+
+header button {
+  background: linear-gradient(
+    90deg,
+    #0735a1,
+    #c1076a
+  ); /* Initial background color */
+  color: white; /* White text */
+  font-size: 1.375rem; /* Match font size */
+  font-weight: bold; /* Bold text */
+  padding: 18px 20px; /* Same padding as menu links */
+  border: none; /* No border */
+  border-radius: 20px;
+  cursor: pointer; /* Pointer cursor */
+  position: relative; /* For pseudo-element positioning */
+  overflow: hidden; /* Prevent pseudo-element overflow */
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1;
+}
+
+header button::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Line thickness */
+  background-color: #00e1ff; /* Line color */
+  transition: width 0.3s ease; /* Smooth underline transition */
+}
+
+header button:hover {
+  background-color: transparent; /* Remove background on hover */
+  color: #00e1ff; /* Match hover color of menu links */
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+header button:hover::after {
+  width: 100%; /* Full underline width on hover */
+}
+
+header button:focus {
+  outline: none; /* Remove outline */
+}
+
+header button:active {
+  background-color: #0056b3; /* Slightly darker color for active state */
+  color: white; /* Retain white text */
+}
+
+main {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.contact {
+  background: linear-gradient(90deg, #0735a1, #c1076a);
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-header h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  color: #fff;
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #fff;
+  font-size: 1em;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+  width: 100%;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #00bcd4;
+  transition: 0.5s;
+}
+
+.contact-form .input-box input[type="submit"]:hover {
+  background: #fff;
+  color: #00bcd4;
+}
+
+@media (max-width: 991px) {
+  .contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.footer {
+  background: #000;
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 1em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
