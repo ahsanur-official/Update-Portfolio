@@ -1,15 +1,19 @@
 body {
   margin: 0;
+  width: 100%;
   font-family: "Play", sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(90deg, #0735a1, #c1076a);
 }
+
 
 header {
   width: 100%;
   display: flex;
-  background-color: #081a35;
+  background: linear-gradient(90deg, #0735a1, #c1076a);
   color: #f4f4f9;
   position: fixed;
+  z-index: 1000; 
   width: 100%;
   top: 0;
   left: 0;
@@ -194,8 +198,149 @@ main {
   padding: 20px;
 }
 
+/* ahsan info section */
+.home {
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+.ahsan-info {
+  width: 50%;
+}
+
+.ahsanur {
+  color: #02eeff;
+}
+
+.ahsan-info h1,
+.ahsan-info h3 {
+  color: #55c3d1;
+}
+
+.text-animate h2 {
+  color: #8fbbe9;
+  font-size: 2.5rem;
+  margin: 10px 0 10px 0;
+}
+
+.ahsan-info p {
+  color: rgb(178, 172, 165);
+  font-size: 1.375rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+button a {
+  text-decoration: none; /* Remove underline from links inside buttons */
+  color: white; /* Ensure text color matches the button */
+}
+
+button {
+  border: none;
+  background-color: #007bff; /* Button background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+a {
+  text-decoration: none; /* Globally remove underline from all anchor links */
+}
+
+.btn-box {
+  margin-top: 20px;
+  
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin: 10px 10px 10px 0;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.social-media {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; /* Space between icons */
+  margin-top: 20px;
+}
+
+.bg-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff; /* Button background color */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bg-icon a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.bg-icon:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.bg-icon:hover span {
+  width: 120%;
+  height: 120%;
+}
+
+.bg-icon:hover a {
+  color: #ffdc00; /* Change icon color on hover */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.img-ahsan {
+  position: relative;
+}
+
+.img-ahsan img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+}
+.img-ahsan img:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 8px 20px rgba(10, 73, 232, 0.418); /* Shadow on hover */
+}
+
+
+
+
+
 .contact {
-  background: linear-gradient(90deg, #0735a1, #c1076a);
+ 
   position: relative;
   z-index: 3;
   padding-top: 50px;
@@ -338,28 +483,9 @@ main {
   color: #00bcd4;
 }
 
-@media (max-width: 991px) {
-  .contact {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .contact-info {
-    margin-bottom: 40px;
-    width: 100%;
-  }
-
-  .contact-form {
-    width: 100%;
-  }
-}
 
 .footer {
-  background: #000;
+  
   padding: 30px 0px;
   text-align: center;
 }
@@ -396,17 +522,3 @@ main {
   margin: 0% 1%;
 }
 
-@media (max-width: 720px) {
-  .footer {
-    text-align: left;
-    padding: 5%;
-  }
-  .footer .row ul li {
-    display: block;
-    margin: 10px 0px;
-    text-align: left;
-  }
-  .footer .row a i {
-    margin: 0% 3%;
-  }
-}
