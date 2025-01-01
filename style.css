@@ -6,14 +6,13 @@ body {
   background: linear-gradient(90deg, #0735a1, #c1076a);
 }
 
-
 header {
   width: 100%;
   display: flex;
   background: linear-gradient(90deg, #0735a1, #c1076a);
   color: #f4f4f9;
   position: fixed;
-  z-index: 1000; 
+  z-index: 1000;
   width: 100%;
   top: 0;
   left: 0;
@@ -49,7 +48,6 @@ header h1 {
   justify-content: center;
 }
 
-/* General Nav Styles */
 .navlinks {
   display: flex;
   width: 60%;
@@ -59,7 +57,7 @@ header h1 {
   margin-right: 8px;
 }
 
-.navlinks > nav > ul {
+.navlinks>nav>ul {
   list-style: none;
   display: flex;
   justify-content: flex-start;
@@ -67,62 +65,63 @@ header h1 {
   padding: 0;
 }
 
-.navlinks > nav > ul > li {
-  position: relative; /* Required for submenu alignment */
+.navlinks>nav>ul>li {
+  position: relative;
   margin: 0 20px;
 }
 
-/* Parent Menu Links */
-.navlinks > nav > ul > li a {
+.navlinks>nav>ul>li a {
   color: #f4f4f9;
   text-decoration: none;
   font-size: 1.375rem;
   padding: 22px 10px;
   display: inline-block;
-  position: relative; /* For positioning the pseudo-element */
+  position: relative;
+  /* For positioning the pseudo-element */
   transition: transform 0.3s ease, z-index 0.3s ease;
   z-index: 1;
 }
 
-.navlinks > nav > ul > li a::after {
+.navlinks>nav>ul>li a::after {
   content: "";
   position: absolute;
-  bottom: 0; /* Position at the bottom of the link */
+  bottom: 0;
+  /* Position at the bottom of the link */
   left: 0;
-  width: 0; /* Start with no width */
-  height: 2px; /* Line thickness */
-  background-color: #00e1ff; /* Line color */
-  transition: width 0.3s ease; /* Smooth transition effect */
+  width: 0;
+  /* Start with no width */
+  height: 2px;
+  /* Line thickness */
+  background-color: #00e1ff;
+  /* Line color */
+  transition: width 0.3s ease;
+  /* Smooth transition effect */
 }
 
-.navlinks > nav > ul > li:hover > a {
-  color: #00e1ff; /* Change link color on hover */
+.navlinks>nav>ul>li:hover>a {
+  color: #00e1ff;
+  /* Change link color on hover */
   z-index: 10;
   transform: scale(1.1);
 }
 
-.navlinks > nav > ul > li a:hover::after {
-  width: 100%; /* Full width on hover */
+.navlinks>nav>ul>li a:hover::after {
+  width: 100%;
+  /* Full width on hover */
 }
 
-/* Submenu Container */
+
 .navlinks .submenu {
-  display: none; /* Hide submenu by default */
+  display: none;
   position: absolute;
-  top: 100%; /* Position below the parent menu item */
+  top: 100%;
   left: 0;
   background-color: #111;
   border-radius: 5px;
   padding: 0;
   min-width: 200px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10; /* Ensure it appears above other elements */
-  overflow: visible; /* Ensure submenu is visible */
-}
-
-/* Submenu Items */
-.navlinks .submenu li {
-  list-style: none;
+  z-index: 1000;
 }
 
 .navlinks .submenu li a {
@@ -135,62 +134,91 @@ header h1 {
 }
 
 .navlinks .submenu li a:hover {
-  background-color: #00e1ff; /* Highlight color on hover */
+  background-color: #00e1ff;
   color: #111;
 }
 
 .navlinks .has-submenu:hover .submenu {
-  display: block !important; /* Ensure it shows on hover */
+  display: block;
 }
 
+
 header button {
-  background: linear-gradient(
-    90deg,
-    #0735a1,
-    #c1076a
-  ); /* Initial background color */
-  color: white; /* White text */
-  font-size: 1.375rem; /* Match font size */
-  font-weight: bold; /* Bold text */
-  padding: 18px 20px; /* Same padding as menu links */
-  border: none; /* No border */
+  background: linear-gradient(90deg,
+      #0735a1,
+      #c1076a);
+  /* Initial gradient background */
+  color: white;
+  /* White text */
+  font-size: 1.375rem;
+  /* Match font size */
+  font-weight: bold;
+  /* Bold text */
+  padding: 18px 20px;
+  /* Same padding as menu links */
+  border: none;
+  /* No border */
   border-radius: 20px;
-  cursor: pointer; /* Pointer cursor */
-  position: relative; /* For pseudo-element positioning */
-  overflow: hidden; /* Prevent pseudo-element overflow */
-  transition: transform 0.3s ease, z-index 0.3s ease;
+  cursor: pointer;
+  /* Pointer cursor */
+  position: relative;
+  /* For pseudo-element positioning */
+  overflow: hidden;
+  /* Prevent pseudo-element overflow */
+  transition: transform 0.3s ease, background 0.5s ease, color 0.3s ease,
+    z-index 0.3s ease;
   z-index: 1;
 }
 
 header button::after {
   content: "";
   position: absolute;
-  bottom: 0; /* Position at the bottom */
-  left: 0;
-  width: 0; /* Start with no width */
-  height: 2px; /* Line thickness */
-  background-color: #00e1ff; /* Line color */
-  transition: width 0.3s ease; /* Smooth underline transition */
+  bottom: 0;
+  /* Position underline at the bottom */
+  left: 50%;
+  /* Start at the center */
+  width: 0;
+  /* Start with no width */
+  height: 2px;
+  /* Line thickness */
+  background-color: #00e1ff;
+  /* Line color */
+  transition: width 0.3s ease, left 0.3s ease;
+  /* Smooth underline transition */
+}
+
+header button a {
+  text-decoration: none;
+  color: inherit;
+  /* Use button's color */
 }
 
 header button:hover {
-  background-color: transparent; /* Remove background on hover */
-  color: #00e1ff; /* Match hover color of menu links */
-  z-index: 10;
+  background: transparent;
+  /* Remove gradient background */
+  color: #00e1ff;
+  /* Change text to blue */
   transform: scale(1.1);
+  /* Add scaling effect */
 }
 
 header button:hover::after {
-  width: 100%; /* Full underline width on hover */
+  width: 100%;
+  /* Full underline width on hover */
+  left: 0;
+  /* Align underline to the left */
 }
 
 header button:focus {
-  outline: none; /* Remove outline */
+  outline: none;
+  /* Remove focus outline */
 }
 
 header button:active {
-  background-color: #0056b3; /* Slightly darker color for active state */
-  color: white; /* Retain white text */
+  background: #0056b3;
+  /* Slightly darker background for active state */
+  color: white;
+  /* Retain white text */
 }
 
 main {
@@ -235,33 +263,8 @@ main {
   margin-bottom: 10px;
 }
 
-button a {
-  text-decoration: none; /* Remove underline from links inside buttons */
-  color: white; /* Ensure text color matches the button */
-}
-
-button {
-  border: none;
-  background-color: #007bff; /* Button background */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
-
-a {
-  text-decoration: none; /* Globally remove underline from all anchor links */
-}
-
 .btn-box {
   margin-top: 20px;
-  
 }
 
 .btn {
@@ -271,6 +274,7 @@ a {
   border-radius: 25px;
   margin: 10px 10px 10px 0;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -280,7 +284,8 @@ a {
 .social-media {
   display: flex;
   justify-content: flex-start;
-  gap: 20px; /* Space between icons */
+  gap: 20px;
+  /* Space between icons */
   margin-top: 20px;
 }
 
@@ -290,7 +295,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #007bff; /* Button background color */
+  background-color: #007bff;
+  /* Button background color */
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -303,7 +309,8 @@ a {
 }
 
 .bg-icon:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
+  /* Darker shade on hover */
 }
 
 .bg-icon:hover span {
@@ -312,8 +319,10 @@ a {
 }
 
 .bg-icon:hover a {
-  color: #ffdc00; /* Change icon color on hover */
-  transition: color 0.3s ease-in-out; /* Smooth color transition */
+  color: #ffdc00;
+  /* Change icon color on hover */
+  transition: color 0.3s ease-in-out;
+  /* Smooth color transition */
 }
 
 .img-ahsan {
@@ -330,24 +339,148 @@ a {
   display: block;
   overflow: hidden;
 }
+
 .img-ahsan img:hover {
-  transform: scale(1.05); /* Zoom effect */
-  box-shadow: 0 8px 20px rgba(10, 73, 232, 0.418); /* Shadow on hover */
+  transform: scale(1.05);
+  /* Zoom effect */
+  box-shadow: 0 8px 20px rgba(255, 0, 200, 0.418);
+  /* Shadow on hover */
+}
+
+/* About */
+.title h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #02eeff;
+  ;
+}
+
+/* General About Section Styling */
+.about {
+  width: 100%;
+  padding: 50px 0;
+  color: rgb(240, 232, 220);
+}
+
+.about .row {
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+/* About Image Styling */
+.aboutImage img {
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutImage img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* About Content Styling */
+.ahsanAbout {
+  width: 65%;
+  text-align: left;
+}
+
+.ahsanAbout h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.ahsanAbout h3 {
+  font-size: 1.5rem;
+  color: #02eeff;
+  margin-bottom: 15px;
+}
+
+.ahsanAbout p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.theme-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.theme-list li {
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+
+.theme-list li b {
+  font-weight: 600;
+  color: #02eeff;
+}
+
+/* Button Styling */
+.about .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  /* Smooth rounded edges */
+  border: 2px solid #00e1ff;
+  /* Blue border */
+  color: #02eeff;
+  /* Text color matching border */
+  background-color: transparent;
+  /* Transparent background by default */
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  /* Smooth transitions */
+  cursor: pointer;
+  /* Pointer on hover */
+}
+
+/* Button Hover Effect */
+.about .btn:hover {
+  background-color: #02eeff;
+  /* Blue background on hover */
+  color: #ffffff;
+  /* White text on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge */
+}
+
+/* Link Inside Button */
+.about .btn a {
+  text-decoration: none;
+  /* Remove underline */
+  color: inherit;
+  /* Inherit button text color */
+}
+
+/* Hover on Link */
+.about .btn:hover a {
+  color: inherit;
+  /* Ensure link color follows button hover color */
 }
 
 
 
 
 
+/* Contact */
 .contact {
- 
   position: relative;
   z-index: 3;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.container {
+.contact .container {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
@@ -459,8 +592,8 @@ a {
   color: #666;
 }
 
-.contact-form .input-box input:focus ~ span,
-.contact-form .input-box textarea:focus ~ span {
+.contact-form .input-box input:focus~span,
+.contact-form .input-box textarea:focus~span {
   color: #e91e63;
   font-size: 12px;
   transform: translateY(-20px);
@@ -483,9 +616,7 @@ a {
   color: #00bcd4;
 }
 
-
 .footer {
-  
   padding: 30px 0px;
   text-align: center;
 }
@@ -521,4 +652,3 @@ a {
   font-size: 2em;
   margin: 0% 1%;
 }
-
