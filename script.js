@@ -20,3 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// script.js
+function openTab(event, tabName) {
+  // Hide all tab panels
+  const tabPanels = document.querySelectorAll('.tab-panel');
+  tabPanels.forEach(panel => panel.classList.remove('active'));
+
+  // Deactivate all tab links
+  const tabLinks = document.querySelectorAll('.tab-link');
+  tabLinks.forEach(link => link.classList.remove('active'));
+
+  // Show the selected tab panel and activate the tab link
+  document.getElementById(tabName).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
