@@ -1,0 +1,170 @@
+/* About */
+
+
+/* General About Section Styling */
+.about {
+    width: 100%;
+    padding: 50px 0;
+    color: rgb(240, 232, 220);
+}
+
+.about .row {
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+/* About Image Styling */
+.aboutImage img {
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutImage img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* About Content Styling */
+.ahsanAbout {
+    width: 65%;
+    text-align: left;
+}
+
+.ahsanAbout h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.ahsanAbout h3 {
+    font-size: 1.5rem;
+    color: #02eeff;
+    margin-bottom: 15px;
+}
+
+.ahsanAbout p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.theme-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.theme-list li {
+    font-size: 1.5rem;
+    margin: 8px 0;
+}
+
+.theme-list li b {
+    font-weight: 600;
+    color: #02eeff;
+}
+
+/* Button Styling */
+.about .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    /* Smooth rounded edges */
+    border: 2px solid #00e1ff;
+    /* Blue border */
+    color: #02eeff;
+    /* Text color matching border */
+    background-color: transparent;
+    /* Transparent background by default */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions */
+    cursor: pointer;
+    /* Pointer on hover */
+}
+
+/* Button Hover Effect */
+.about .btn:hover {
+    background-color: #02eeff;
+    /* Blue background on hover */
+    color: #ffffff;
+    /* White text on hover */
+    transform: scale(1.05);
+}
+
+/* Link Inside Button */
+.about .btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hover on Link */
+.about .btn:hover a {
+    color: inherit;
+}
+
+
+.tab-container {
+    width: 80%;
+    margin: auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #555;
+}
+
+.tab-link {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.375rem;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.tab-link:hover {
+    color: #00e1ff;
+}
+
+.tab-link.active {
+    color: #00e1ff;
+    border-bottom: 2px solid #00e1ff;
+}
+
+.tab-content {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeIn 0.3s;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
