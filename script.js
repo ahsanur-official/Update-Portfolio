@@ -34,3 +34,25 @@ function openTab(event, tabName) {
   document.getElementById(tabName).classList.add('active');
   event.currentTarget.classList.add('active');
 }
+
+
+// Show Details on Image Click
+function showDetails(image) {
+  const parentBox = image.parentElement;
+  parentBox.classList.toggle("active");
+}
+
+// View Image in Popup
+function viewImage(imageSrc) {
+  const popup = document.getElementById("image-popup");
+  const popupImg = document.getElementById("popup-img");
+
+  popupImg.src = imageSrc;
+  popup.style.display = "flex";
+}
+
+// Close Popup
+function closePopup() {
+  const popup = document.getElementById("image-popup");
+  popup.style.display = "none";
+}

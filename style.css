@@ -453,21 +453,17 @@ main {
   color: #ffffff;
   /* White text on hover */
   transform: scale(1.05);
-  /* Slightly enlarge */
 }
 
 /* Link Inside Button */
 .about .btn a {
   text-decoration: none;
-  /* Remove underline */
   color: inherit;
-  /* Inherit button text color */
 }
 
 /* Hover on Link */
 .about .btn:hover a {
   color: inherit;
-  /* Ensure link color follows button hover color */
 }
 
 
@@ -506,7 +502,6 @@ main {
 }
 
 .tab-content {
-  
   padding: 15px;
   border-radius: 5px;
 }
@@ -522,12 +517,287 @@ main {
 
 @keyframes fadeIn {
   from {
-      opacity: 0;
+    opacity: 0;
   }
+
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
+
+.skills-container h2 {
+  color: rgb(240, 232, 220);
+  font-size: 1.8em;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.skills-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skills-category {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #c1076a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.skills-category:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.skill-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: #ffcc00;
+}
+
+.skill-name {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.skills-container a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.skills-container a:hover {
+  text-decoration: underline;
+}
+
+/* Containers */
+.education-container,
+.leadership-container {
+  margin-top: 20px;
+}
+
+/* Cards (General) */
+.education-card,
+.leadership-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #c1076a;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+/* Headings */
+.education-card h3,
+.leadership-card h3 {
+  color: rgb(240, 232, 220);
+  margin-bottom: 10px;
+}
+
+/* Institution Name */
+.institution {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.institution p {
+  color: #999;
+}
+
+/* Highlights */
+.highlight {
+  color: rgb(240, 232, 220);
+  margin-top: 10px;
+}
+
+/* Strong Tags */
+.education-card p strong,
+.leadership-card p strong {
+  color: rgb(240, 232, 220);
+}
+
+.education-card span {
+  color: rgb(240, 232, 220);
+}
+
+.leadership-card span {
+  color: rgb(240, 232, 220);
+}
+
+.education-card:hover,
+.leadership-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.achievement-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.achievement-box {
+  position: relative;
+  width: 32%;
+  background: linear-gradient(90deg, #0735a1, #c1076a);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.box-image {
+  width: 100%;
+  height: 200px;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.achievement-box:hover .details {
+  opacity: 1;
+}
+
+.details p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn {
+  background-color: #0735a1;
+}
+
+.view-btn:hover {
+  background-color: #0735a1af;
+}
+
+.download-btn {
+  background-color: #c1076a;
+}
+
+.download-btn:hover {
+  background-color: #c1076aaf;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 600px;
+  background: linear-gradient(90deg, #0735a1, #c1076a);
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  border-radius: 10px;
+}
+
+.popup img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0735a1, #c1076a);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ff4040;
+}
+
+
+
+
+
+
 
 
 /* Contact */
@@ -573,9 +843,16 @@ main {
   width: 50%;
 }
 
+.container p{
+  text-align: justify;
+  font-size: 1.125rem;
+  color: #999;
+}
+
 .contact-info-item {
   display: flex;
   margin-bottom: 30px;
+  align-items: flex-end;
 }
 
 .contact-info-icon {
@@ -596,7 +873,7 @@ main {
 }
 
 .contact-info-content h4 {
-  color: #1da9c0;
+  color: #02eeff;
   font-size: 1.4em;
   margin-bottom: 5px;
 }
@@ -659,20 +936,26 @@ main {
 
 .contact-form .input-box input[type="submit"] {
   width: 100%;
-  background: #00bcd4;
+  background: linear-gradient(90deg, #0735a1, #c1076a); 
   color: #fff;
-  border: none;
+  border: 1px solid transparent; 
   cursor: pointer;
   padding: 10px;
   font-size: 18px;
-  border: 1px solid #00bcd4;
-  transition: 0.5s;
+  border-radius: 5px;
+  transition: all 0.5s ease; 
 }
 
 .contact-form .input-box input[type="submit"]:hover {
   background: #fff;
-  color: #00bcd4;
+  background: linear-gradient(90deg, #0735a1, #c1076a); 
+  color: #fff; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  border: 1px solid #9b00d4; 
+  transition: all 0.5s ease-in-out; 
 }
+
 
 .footer {
   padding: 30px 0px;

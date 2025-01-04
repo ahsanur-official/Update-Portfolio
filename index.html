@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <!--FONT AWESOME-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 
   <!--GOOGLE FONTS-->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -141,28 +143,245 @@
 
     <div class="tab-container">
       <div class="tabs">
-        <button class="tab-link" onclick="openTab(event, 'Skills')">Skills</button>
+        <button class="tab-link active" onclick="openTab(event, 'Skills')">Skills</button>
         <button class="tab-link" onclick="openTab(event, 'Education')">Education</button>
         <button class="tab-link" onclick="openTab(event, 'Leadership')">Leadership</button>
         <button class="tab-link" onclick="openTab(event, 'Achievement')">Achievement</button>
       </div>
       <div class="tab-content">
-        <div id="Skills" class="tab-panel">
-          <p>Skills content goes here...</p>
+        <div id="Skills" class="tab-panel active">
+          <div class="skills-container">
+            <!-- Skills Section -->
+            <div class="skills-section">
+              <!-- Languages -->
+              <div class="skills-category">
+                <h2>Languages</h2>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="fab fa-cuttlefish skill-icon"></i>
+                    <span class="skill-name">C</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fas fa-plus-circle skill-icon"></i>
+                    <span class="skill-name">C++</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fab fa-java skill-icon"></i>
+                    <span class="skill-name">Java</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fab fa-python skill-icon"></i>
+                    <span class="skill-name">Python</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Frontend -->
+              <div class="skills-category">
+                <h2>Frontend</h2>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <span class="skill-name">HTML</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <span class="skill-name">CSS</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fab fa-js skill-icon"></i>
+                    <span class="skill-name">JavaScript</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Backend -->
+              <div class="skills-category">
+                <h2>Backend</h2>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="fab fa-node skill-icon"></i>
+                    <span class="skill-name">Node.js</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fas fa-database skill-icon"></i>
+                    <span class="skill-name">MongoDB</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fas fa-database skill-icon"></i>
+                    <span class="skill-name">MySQL</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Tools -->
+              <div class="skills-category">
+                <h2>Tools</h2>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="fab fa-git-alt skill-icon"></i>
+                    <span class="skill-name">Git</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fab fa-github skill-icon"></i>
+                    <span class="skill-name">GitHub</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fas fa-drafting-compass skill-icon"></i>
+                    <span class="skill-name">Figma</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Additionals -->
+              <div class="skills-category">
+                <h2>Additionals</h2>
+                <ul class="skills-list">
+                  <li class="skill-item">
+                    <i class="fas fa-image skill-icon"></i>
+                    <span class="skill-name">Illustrator</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fas fa-image skill-icon"></i>
+                    <span class="skill-name">Photoshop</span>
+                  </li>
+                  <li class="skill-item">
+                    <i class="fas fa-file-alt skill-icon"></i>
+                    <span class="skill-name">Microsoft Office</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
         </div>
-        
+
         <div id="Education" class="tab-panel">
-          <p>Education content goes here...</p>
+          <!-- Education Section -->
+          <div class="education-container">
+            <div class="education-card">
+              <h3>B.Sc in Computer Science and Engineering (Ongoing)</h3>
+              <p class="institution">Pundra University of Science & Technology (PUB), Bogura</p>
+              <p class="highlight">Achievement:</p>
+              <p><span>1st Runner-Up at the PUPC Programming Contest 2023, organized by the Pundra University
+                  Programming
+                  Club.</span></p>
+            </div>
+
+            <div class="education-card">
+              <h3>HSC in Science</h3>
+              <p class="institution">Govt. Shah Sultan College, Bogura.</p>
+              <p><strong>Year:</strong> <span>2019 - 2020</span></p>
+              <p><strong>GPA:</strong><span> 5.00</span></p>
+            </div>
+          </div>
         </div>
 
         <div id="Leadership" class="tab-panel">
-          <p>Leadership content goes here...</p>
+          <!-- Leadership Section -->
+          <div class="leadership-container">
+            <div class="leadership-card">
+              <h3>Executive Member (2024-2025)</h3>
+              <p class="institution">BASIS Students' Forum PUB Chapter</p>
+              <p><span>Collaborated with students and faculty to promote IT development and foster career growth in the
+                  IT
+                  sector.</span></p>
+            </div>
+          </div>
         </div>
-        
+
+        <!-- Achievement Section -->
         <div id="Achievement" class="tab-panel">
-          <p>Achievement content goes here...</p>
+          <div class="achievement-container">
+
+            <div class="achievement-box">
+              <img src="certificates/beginner.png" alt="Beginner PC" class="box-image" onclick="showDetails(this)">
+              <div class="details">
+                <p>Awarded for securing 1st Runner-Up position in a programming contest.
+                  <br> Issued by PUPC.
+                </p>
+                <button class="btn view-btn" onclick="viewImage('certificates/beginner.png')">View</button>
+                <a href="certificates/beginner.png" download class="btn download-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="achievement-box">
+              <img src="certificates/Python - Ostad.png" alt="Python" class="box-image" onclick="showDetails(this)">
+              <div class="details">
+                <p>Certificate of completion for the course "Run Your First Python Code." at OSTAD.</p>
+                <button class="btn view-btn" onclick="viewImage('certificates/Python - Ostad.png')">View</button>
+                <a href="certificates/Python - Ostad.png" download class="btn download-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="achievement-box">
+              <img src="certificates/JS - Ostad.png" alt="JS" class="box-image" onclick="showDetails(this)">
+              <div class="details">
+                <p>Certificate of completion for the course "Run Your First Code with JavaScript." at OSTAD.</p>
+                <button class="btn view-btn" onclick="viewImage('certificates/JS - Ostad.png')">View</button>
+                <a href="certificates/JS - Ostad.png" download class="btn download-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="achievement-box">
+              <img src="certificates/Digital Literacy-CERTIFICATE.png" alt="Digital Literacy-CERTIFICATE"
+                class="box-image" onclick="showDetails(this)">
+              <div class="details">
+                <p>Certification awarded for completing a Digital Literacy course.
+                  <br> Issued by FutureNation.
+                </p>
+                <button class="btn view-btn"
+                  onclick="viewImage('certificates/Digital Literacy-CERTIFICATE.png')">View</button>
+                <a href="certificates/Digital Literacy-CERTIFICATE.png" download class="btn download-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="achievement-box">
+              <img src="certificates/unitednations.jpg" alt="unitednations" class="box-image"
+                onclick="showDetails(this)">
+              <div class="details">
+                <p>Certificate of participation in the "My Voice Matters" debate forum. <br> Issued by European Union.
+                </p>
+                <button class="btn view-btn" onclick="viewImage('certificates/unitednations.jpg')">View</button>
+                <a href="certificates/unitednations.jpg" download class="btn download-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="achievement-box">
+              <img src="certificates/Employability Masterclass 005-CERTIFICATE.png"
+                alt="Employability Masterclass 005-CERTIFICATE" class="box-image" onclick="showDetails(this)">
+              <div class="details">
+                <p>Certificate awarded for completing the "Employability Masterclass 005."
+                  <br> Issued by FutureNation.
+                </p>
+                <button class="btn view-btn"
+                  onclick="viewImage('certificates/Employability Masterclass 005-CERTIFICATE.png')">View</button>
+                <a href="certificates/Employability Masterclass 005-CERTIFICATE.png" download
+                  class="btn download-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="achievement-box">
+              <img src="certificates/The SDG Primer-CERTIFICATE.png" alt="The SDG Primer" class="box-image"
+                onclick="showDetails(this)">
+              <div class="details">
+                <p>Certification awarded for completing "The SDG Primer" course.
+                  <br> Issued by FutureNation.
+                </p>
+                <button class="btn view-btn"
+                  onclick="viewImage('certificates/The SDG Primer-CERTIFICATE.png')">View</button>
+                <a href="certificates/The SDG Primer-CERTIFICATE.png" download class="btn download-btn">Download</a>
+              </div>
+            </div>
+
+          </div>
         </div>
-       
+
+        <!-- Popup Modal -->
+        <div id="image-popup" class="popup">
+          <span class="close-btn" onclick="closePopup()">×</span>
+          <img id="popup-img" src="" alt="Popup Image">
+        </div>
       </div>
     </div>
 
@@ -188,16 +407,18 @@
     </div>
 
 
-
+    <!--Contact Part-->
     <div class="contact" id="contact">
       <div class="section-header">
         <div class="container">
           <h2>Contact Us</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book.
+            Let's Connect! <br>
+            As a passionate and dedicated frontend developer, I’m always excited to collaborate on innovative projects,
+            solve challenging problems, and bring creative ideas to life through clean, efficient, and responsive
+            designs. Whether you have a new project idea, need assistance with your current website, or just want to
+            geek out over code and design trends, I’d love to hear from you!
+
           </p>
         </div>
       </div>
@@ -213,8 +434,8 @@
               <div class="contact-info-content">
                 <h4>Address</h4>
                 <p>
-                  4671 Sugar Camp Road,<br />
-                  Owatonna, Minnesota, <br />55060
+                  Shibpur, Khetlal,<br />
+                  Joypurhat, Bangladesh, <br />5920
                 </p>
               </div>
             </div>
@@ -226,7 +447,8 @@
 
               <div class="contact-info-content">
                 <h4>Phone</h4>
-                <p>571-457-2321</p>
+                <p>+880 01776 890 648</p>
+                <p>+880 01302 480 793</p>
               </div>
             </div>
 
@@ -237,7 +459,8 @@
 
               <div class="contact-info-content">
                 <h4>Email</h4>
-                <p>ntamerrwael@mfano.ga</p>
+                <p>mdahsanurrahaman2456@gmail.com</p>
+                <p>md.ahsanur.rahaman.main@gmail.com</p>
               </div>
             </div>
           </div>
