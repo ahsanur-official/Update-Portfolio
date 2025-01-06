@@ -4,6 +4,7 @@ body {
   font-family: "Play", sans-serif;
   overflow-x: hidden;
   background: linear-gradient(90deg, #0735a1, #c1076a);
+  scroll-behavior: smooth; 
 }
 
 header {
@@ -176,7 +177,7 @@ header h1 {
 .title h2 {
   margin-top: 0;
   text-align: center;
-  color: #fff;
+  color: rgb(240, 232, 220);
   font-weight: bold;
   font-size: 3em;
   margin-bottom: 20px;

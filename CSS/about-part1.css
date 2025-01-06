@@ -1,7 +1,5 @@
 /* About */
 
-
-/* General About Section Styling */
 .about {
     width: 100%;
     padding: 50px 0;
@@ -17,7 +15,6 @@
     padding: 10px 10%;
 }
 
-/* About Image Styling */
 .aboutImage img {
     max-width: 300px;
     border-radius: 15px;
@@ -30,7 +27,6 @@
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* About Content Styling */
 .ahsanAbout {
     width: 65%;
     text-align: left;
@@ -70,42 +66,32 @@
     color: #02eeff;
 }
 
-/* Button Styling */
 .about .btn {
     display: inline-block;
     padding: 12px 25px;
     font-size: 1rem;
     border-radius: 25px;
-    /* Smooth rounded edges */
     border: 2px solid #00e1ff;
-    /* Blue border */
     color: #02eeff;
-    /* Text color matching border */
     background-color: transparent;
-    /* Transparent background by default */
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    /* Smooth transitions */
     cursor: pointer;
-    /* Pointer on hover */
 }
 
-/* Button Hover Effect */
 .about .btn:hover {
     background-color: #02eeff;
-    /* Blue background on hover */
     color: #ffffff;
-    /* White text on hover */
     transform: scale(1.05);
 }
 
-/* Link Inside Button */
+
 .about .btn a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Hover on Link */
+
 .about .btn:hover a {
     color: inherit;
 }
@@ -121,6 +107,8 @@
     justify-content: center;
     margin-bottom: 20px;
     border-bottom: 2px solid #555;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
 }
 
 .tab-link {
@@ -133,11 +121,16 @@
     font-size: 1.375rem;
     outline: none;
     border-bottom: 2px solid transparent;
-    transition: 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
+    text-align: center;
+    /* Align text centrally for smaller widths */
 }
 
-.tab-link:hover {
+.tab-link:hover,
+.tab-link:focus {
     color: #00e1ff;
+    outline: none;
+    /* Remove default focus outline */
 }
 
 .tab-link.active {
@@ -148,23 +141,45 @@
 .tab-content {
     padding: 15px;
     border-radius: 5px;
+    color: white;
 }
 
 .tab-panel {
     display: none;
-    animation: fadeIn 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 0.3s forwards;
+    /* Added sliding effect */
 }
 
 .tab-panel.active {
     display: block;
 }
 
-@keyframes fadeIn {
+@keyframes fadeSlideIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        /* Stack tabs vertically on smaller screens */
+        align-items: center;
+    }
+
+    .tab-link {
+        flex: none;
+        width: 100%;
+        font-size: 1.125rem;
+        /* Slightly smaller font size */
     }
 }

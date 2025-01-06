@@ -18,6 +18,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Smooth scroll`
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default link behavior
+
+      const targetId = link.getAttribute("href").substring(1); // Get the target ID
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        // Scroll to the section
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+});
+
 
 
 // script.js

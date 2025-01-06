@@ -40,14 +40,18 @@
     margin-top: 20px;
 }
 
-.btn {
+.home .btn {
     background-color: #007bff;
-    color: #fff;
+    display: inline-block;
     padding: 10px 20px;
-    border-radius: 25px;
-    margin: 10px 10px 10px 0;
-    transition: all 0.3s ease;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
     text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -58,7 +62,6 @@
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    /* Space between icons */
     margin-top: 20px;
 }
 
@@ -69,7 +72,6 @@
     align-items: center;
     justify-content: center;
     background-color: #007bff;
-    /* Button background color */
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -83,7 +85,6 @@
 
 .bg-icon:hover {
     background-color: #0056b3;
-    /* Darker shade on hover */
 }
 
 .bg-icon:hover span {
@@ -93,9 +94,7 @@
 
 .bg-icon:hover a {
     color: #ffdc00;
-    /* Change icon color on hover */
     transition: color 0.3s ease-in-out;
-    /* Smooth color transition */
 }
 
 .img-ahsan {

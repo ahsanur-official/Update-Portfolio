@@ -1,0 +1,73 @@
+/* General Section Styling */
+.services {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.services .container {
+    margin: 0 auto;
+}
+
+.services .section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Fredoka One', cursive;
+    color: rgb(240, 232, 220);
+}
+
+/* Service Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Service Card */
+.service-card {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #c1076a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.service-card i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 1.55em;
+    margin-bottom: 10px;
+    color: rgb(240, 232, 220);
+}
+
+.service-card p {
+    color: rgb(240, 232, 220);
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.service-card .container p {
+    color: rgb(240, 232, 220);
+    text-align: justify;
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover i {
+    color: #0056b3;
+}
