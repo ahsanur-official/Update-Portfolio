@@ -19,8 +19,7 @@
 .blog-box {
     flex: 0 0 calc(33.33% - 20px);
     margin: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    border-left: 4px solid #c1076a;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;

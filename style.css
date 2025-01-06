@@ -4,7 +4,7 @@ body {
   font-family: "Play", sans-serif;
   overflow-x: hidden;
   background: linear-gradient(90deg, #0735a1, #c1076a);
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 header {
@@ -13,7 +13,7 @@ header {
   background: linear-gradient(90deg, #0735a1, #c1076a);
   color: #f4f4f9;
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   width: 100%;
   top: 0;
   left: 0;
@@ -21,7 +21,8 @@ header {
   align-items: center;
   transition: top 0.3s ease-in-out;
   margin-bottom: 200px;
-  overflow: hidden;
+  overflow: visible;
+
 }
 
 header .image {
@@ -103,18 +104,24 @@ header h1 {
   width: 100%;
 }
 
-
 .navlinks .submenu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #111;
   border-radius: 5px;
-  padding: 0;
+  padding: 10px 0;
   min-width: 200px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 9999;
+}
+
+.navlinks .has-submenu:hover .submenu {
+  display: block;
+}
+
+.navlinks .submenu li {
+  list-style: none;
 }
 
 .navlinks .submenu li a {
@@ -122,25 +129,21 @@ header h1 {
   padding: 10px 15px;
   text-decoration: none;
   color: #f4f4f9;
-  font-size: 1rem;
+  font-size: 1.375rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1;
 }
 
 .navlinks .submenu li a:hover {
-  background-color: #00e1ff;
-  color: #111;
+  color: #00e1ff;
 }
 
-.navlinks .has-submenu:hover .submenu {
-  display: block;
-}
 
-/* Social Buttons Container */
 .social-buttons {
   width: 25%;
   display: flex;
   justify-content: flex-end;
-  gap: 15px; 
+  gap: 15px;
   align-items: center;
 }
 
@@ -150,14 +153,14 @@ header h1 {
   align-items: center;
   width: 40px;
   height: 40px;
-  color: white; 
-  border-radius: 50%; 
+  color: white;
+  border-radius: 50%;
   text-decoration: none;
-  transition: transform 0.3s ease-out; 
+  transition: transform 0.3s ease-out;
 }
 
 .social-buttons a:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 
@@ -166,12 +169,12 @@ header h1 {
 }
 
 .social-buttons a .bxl-linkedin {
-  font-size: 35px; 
-  color: #0077b5; 
+  font-size: 35px;
+  color: #0077b5;
 }
 
 .social-buttons a:hover .bxl-linkedin {
-  color: #005582; 
+  color: #005582;
 }
 
 .title h2 {
@@ -187,4 +190,3 @@ main {
   margin-top: 50px;
   padding: 20px;
 }
-
