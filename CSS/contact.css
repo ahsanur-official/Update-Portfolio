@@ -138,7 +138,7 @@
     font-size: 18px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
 }
 
 .contact-form .input-box input[type="submit"]:hover {
@@ -148,5 +148,5 @@
     -webkit-text-fill-color: transparent;
     border: 1px solid #9b00d4;
     transform: scale(1.01);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); transition: all 0.4s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); transition: all 0.5s ease;
 }

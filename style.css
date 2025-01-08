@@ -11,7 +11,7 @@ header {
   width: 100%;
   display: flex;
   background: linear-gradient(90deg, #0735a1, #c1076a);
-  color: #f4f4f9;
+  color: rgb(240, 232, 220);
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -128,7 +128,7 @@ header h1 {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #f4f4f9;
+  color: rgb(240, 232, 220);
   font-size: 1.375rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 1;
