@@ -1,3 +1,4 @@
+// Scroll Behavior for Header
 document.addEventListener("DOMContentLoaded", () => {
   let lastScrollTop = 0;
   const header = document.querySelector("header");
@@ -7,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const delta = scrollTop - lastScrollTop;
 
     if (delta > 0 && lastScrollTop >= 0) {
-      // User is scrolling down significantly
+      // User is scrolling down
       header.style.top = "-100px";
     } else {
-      // User is scrolling up or not scrolling significantly
+      // User is scrolling up
       header.style.top = "0";
     }
 
@@ -18,19 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Smooth scroll
+// Smooth Scroll for Navigation Links
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-links a");
 
   navLinks.forEach(link => {
     link.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent default link behavior
+      event.preventDefault();
 
-      const targetId = link.getAttribute("href").substring(1); // Get the target ID
+      const targetId = link.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        // Scroll to the section
         targetSection.scrollIntoView({
           behavior: "smooth",
           block: "start"
@@ -40,17 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Tabs
+// Tabs Functionality
 function openTab(event, tabName) {
-  // Hide all tab panels
   const tabPanels = document.querySelectorAll('.tab-panel');
-  tabPanels.forEach(panel => panel.classList.remove('active'));
-
-  // Deactivate all tab links
   const tabLinks = document.querySelectorAll('.tab-link');
+
+  tabPanels.forEach(panel => panel.classList.remove('active'));
   tabLinks.forEach(link => link.classList.remove('active'));
 
-  // Show the selected tab panel and activate the tab link
   document.getElementById(tabName).classList.add('active');
   event.currentTarget.classList.add('active');
 }
@@ -70,40 +67,36 @@ function viewImage(imageSrc) {
   popup.style.display = "flex";
 }
 
-// Close Popup
+// Close Image Popup
 function closePopup() {
   const popup = document.getElementById("image-popup");
   popup.style.display = "none";
 }
 
-// Tabs with Animation
+// Animated Tabs for About Section
 document.addEventListener("DOMContentLoaded", function () {
   const tabLinks = document.querySelectorAll(".tab-link");
   const tabPanels = document.querySelectorAll(".tab-panel");
 
   function openTab(event, tabId) {
-    // Remove active class from all tabs
-    tabLinks.forEach((tab) => tab.classList.remove("active"));
-    tabPanels.forEach((panel) => {
+    tabLinks.forEach(tab => tab.classList.remove("active"));
+    tabPanels.forEach(panel => {
       panel.classList.remove("active");
-      panel.style.opacity = "0"; // Reset opacity for animation
-      panel.style.transform = "translateY(20px)"; // Reset position
-      panel.style.transition = "all 0.5s ease"; // Apply transition
+      panel.style.opacity = "0";
+      panel.style.transform = "translateY(20px)";
+      panel.style.transition = "all 0.5s ease";
     });
 
-    // Add active class to clicked tab
     event.currentTarget.classList.add("active");
     const targetPanel = document.getElementById(tabId);
 
-    // Show and animate the target panel
     targetPanel.classList.add("active");
     setTimeout(() => {
-      targetPanel.style.opacity = "1"; // Fade-in effect
-      targetPanel.style.transform = "translateY(0)"; // Smooth slide-in
+      targetPanel.style.opacity = "1";
+      targetPanel.style.transform = "translateY(0)";
     }, 0);
   }
 
-  // Initial animation for the active tab on load
   const activeTab = document.querySelector(".tab-panel.active");
   if (activeTab) {
     activeTab.style.opacity = "1";
@@ -111,15 +104,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Project Popup Logic
+// Popup Logic for Project Section
 document.addEventListener("DOMContentLoaded", function () {
   const detailsButtons = document.querySelectorAll(".details-btn");
   const popup = document.getElementById("popup");
   const closeBtn = document.querySelector(".close-btn");
   const detailsText = document.querySelector(".details-text");
 
-  // Open popup logic
-  detailsButtons.forEach((button) => {
+  detailsButtons.forEach(button => {
     button.addEventListener("click", function () {
       const details = button.getAttribute("data-details");
       detailsText.textContent = details;
@@ -127,15 +119,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close popup when clicking the close button
   closeBtn.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent event bubbling
+    event.stopPropagation();
     popup.style.display = "none";
   });
 
-  // Close popup when clicking outside popup content
   popup.addEventListener("click", function (event) {
     if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && popup.style.display === "flex") {
       popup.style.display = "none";
     }
   });
@@ -164,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Blog Slider
+// Blogs Slider
 document.addEventListener("DOMContentLoaded", function () {
   const sliderContainer = document.querySelector(".blogs-slider-container");
   const blogBoxes = document.querySelectorAll(".blog-box");
@@ -172,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.getElementById("next-btn");
 
   const boxesPerSlide = 3;
-  const boxWidth = blogBoxes[0].offsetWidth + 20; // Including margin
+  const boxWidth = blogBoxes[0].offsetWidth + 20;
   let currentIndex = 0;
 
   function updateSlider() {
@@ -199,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupText = document.getElementById("popup-text");
   const closeBtn = document.querySelector(".close-btn");
 
-  viewButtons.forEach((button) => {
+  viewButtons.forEach(button => {
     button.addEventListener("click", function () {
       const content = button.getAttribute("data-content");
       if (content) {
@@ -215,6 +211,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   popup.addEventListener("click", function (event) {
     if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && popup.style.display === "flex") {
       popup.style.display = "none";
     }
   });

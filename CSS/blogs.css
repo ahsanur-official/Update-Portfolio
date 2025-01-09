@@ -1,11 +1,13 @@
 /* Blogs Container */
 .blogs-container {
-    width: 80%;
-    margin: auto;
+    width: 85%;
+    /* Increased width for a more spacious layout */
+    margin: 40px auto;
+    /* Adjusted margin for better spacing */
     overflow: hidden;
-    margin-top: 30px;
 }
 
+/* Blogs Slider */
 .blogs-slider {
     overflow: hidden;
     position: relative;
@@ -25,67 +27,89 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    background-color: #fff;
+    /* Adding a clean background */
+    border: 1px solid #e1e1e1;
+    /* Subtle border */
 }
 
 .blog-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    /* Slightly larger hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* More pronounced shadow */
 }
 
+/* Blog Image */
 .blog-image img {
     width: 100%;
-    height: 150px;
+    height: 200px;
+    /* Increased height for better visibility */
     object-fit: cover;
+    border-bottom: 3px solid #c1076a;
+    /* Adding a border below image for distinction */
 }
 
+/* Blog Headline */
 .blog-headline h3 {
-    font-size: 1.2em;
-    margin: 10px;
+    font-size: 1.25em;
+    margin: 15px;
+    font-weight: 600;
+    /* Bolder headline */
+    color: #333;
+    /* Darker color for better readability */
 }
 
+/* Blog Snippet */
 .blog-snippet {
     font-size: 1em;
-    margin: 10px;
+    margin: 0 15px 15px;
     color: #555;
+    line-height: 1.5;
+    /* Improved line height for readability */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+/* Blog Button */
 .blog-button {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.blog-button button {
+.blog-button a {
+    display: inline-block;
     background-color: #007bff;
     color: #fff;
-    padding: 8px 12px;
-    border: none;
+    padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
     transition: background 0.3s;
 }
 
-.blog-button button:hover {
+.blog-button a:hover {
     background-color: #0056b3;
 }
 
 /* Slider Navigation */
 .slider-navigation {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
+    /* Increased top margin for better spacing */
 }
 
 .slider-btn {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-    font-size: 1em;
-    margin: 0 10px;
+    font-size: 1.1em;
+    margin: 0 15px;
 }
 
 .slider-btn:hover {
@@ -108,9 +132,9 @@
 
 .popup-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 700px;
     width: 90%;
     text-align: center;
     position: relative;
