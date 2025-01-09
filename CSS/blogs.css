@@ -1,3 +1,4 @@
+/* Blogs Container */
 .blogs-container {
     width: 80%;
     margin: auto;
@@ -45,6 +46,9 @@
     font-size: 1em;
     margin: 10px;
     color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .blog-button {
@@ -118,4 +122,11 @@
     right: 10px;
     font-size: 1.5em;
     cursor: pointer;
+    color: #ff0000;
+}
+
+#popup-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
 }

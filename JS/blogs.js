@@ -35,8 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     viewButtons.forEach((button) => {
         button.addEventListener("click", function () {
             const content = button.getAttribute("data-content");
-            popupText.textContent = content;
-            popup.style.display = "flex";
+            if (content) {
+                popupText.textContent = content;
+                popup.style.display = "flex";
+            }
         });
     });
 
