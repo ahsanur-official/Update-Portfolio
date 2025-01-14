@@ -1,0 +1,157 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #0735a1, #c1076a);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    padding: 15px 0 8px 0;
+    text-align: center;
+}
+
+header nav button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header nav button a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content */
+main {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border-left: 4px solid #c1076a;
+}
+
+.blog-post {
+    font-family: 'Arial', sans-serif;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: justify;
+}
+
+.blog-post h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.blog-post img {
+    display: block;
+    max-width: 100%;
+    max-height: 550px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.blog-post h3,
+.blog-post h4,
+.blog-post h5 {
+    margin-top: 20px;
+    color: #444;
+}
+
+.blog-post h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.blog-post h4 {
+    font-size: 1.4em;
+    color: #2980b9;
+}
+
+.blog-post h5 {
+    font-size: 1.2em;
+    color: #16a085;
+}
+
+.blog-post b {
+    font-weight: bold;
+    color: #333;
+}
+
+.blog-post ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.blog-post ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.blog-post a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 15px;
+    }
+
+    .blog-post h1 {
+        font-size: 2em;
+    }
+
+    .blog-post img {
+        width: 100%;
+    }
+
+    .blog-post h3,
+    .blog-post h4,
+    .blog-post h5 {
+        font-size: 1.2em;
+    }
+
+    .blog-post p {
+        font-size: 0.95em;
+    }
+}

@@ -1,5 +1,5 @@
 .footer {
-    padding: 10px 0px;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -7,12 +7,12 @@
     display: flex;
     margin: 8px;
     width: 100%;
-    padding: 0.6% 0%;
+    padding: 0.6% 0;
     color: gray;
     font-size: 1em;
     align-items: center;
     justify-content: center;
-    gap: 30px; 
+    gap: 30px;
 }
 
 .footer .row a {
@@ -26,21 +26,43 @@
 }
 
 .footer .row ul {
-    width: 100%;
-    list-style: none; 
+    display: flex;
+    flex-direction: row;
+    /* Keep social links in one row */
+    justify-content: center;
+    gap: 20px;
+    /* Spacing between icons */
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px; 
+    list-style: none;
 }
 
 .footer .row ul li {
     display: inline-block;
+    text-align: center;
 }
 
 .footer .row a i {
     font-size: 2em;
-    margin: 0; 
+    margin: 0;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 0;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer .row ul {
+        gap: 15px;
+    }
+
+    .footer .row a i {
+        font-size: 1.5em;
+    }
+}
