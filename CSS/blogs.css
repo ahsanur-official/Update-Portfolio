@@ -16,8 +16,10 @@
     transition: transform 0.5s ease-in-out;
 }
 
-/* Blog Box */
 .blog-box {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Push content to top and bottom */
     flex: 0 0 calc(33.33% - 20px);
     margin: 10px;
     border-left: 4px solid #c1076a;
@@ -36,8 +38,10 @@
 /* Blog Image */
 .blog-image img {
     width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 200px;
-    object-fit: cover;
     border-bottom: 3px solid #c1076a;
 }
 
@@ -62,16 +66,17 @@
     display: -webkit-box; /* Required for line-clamp */
     -webkit-line-clamp: 3; /* Show only 3 lines */
     -webkit-box-orient: vertical; /* Required for line-clamp */
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add an ellipsis for truncated text */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
 
-/* Blog Button */
-.blog-button {
+  .blog-button {
     text-align: center;
+    margin-top: auto; /* Push it to the bottom of the container */
     margin-bottom: 20px;
-}
+  }
+  
 
 .blog-button a {
     display: inline-block;
