@@ -54,16 +54,18 @@
     color: #007bff;
 }
 
-/* Blog Snippet */
 .blog-snippet {
     font-size: 1em;
     margin: 0 15px 15px;
     color: #555;
     line-height: 1.5;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+    display: -webkit-box; /* Required for line-clamp */
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical; /* Required for line-clamp */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add an ellipsis for truncated text */
+  }
+  
 
 /* Blog Button */
 .blog-button {
