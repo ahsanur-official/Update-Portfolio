@@ -1,6 +1,6 @@
 /* Blogs Container */
 .blogs-container {
-    width: 85%;
+    width: 95%;
     margin: 40px auto;
     overflow: hidden;
 }
@@ -121,7 +121,6 @@ a{
 
     .blog-box {
         flex: 0 0 calc(50% - 20px);
-        /* Two-column layout for tablets */
     }
 }
 
@@ -133,6 +132,5 @@ a{
 
     .blog-box {
         flex: 0 0 100%;
-        /* Single-column layout for smaller screens */
     }
 }
