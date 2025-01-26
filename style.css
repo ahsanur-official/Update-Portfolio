@@ -112,7 +112,7 @@ header h1 {
   border-radius: 5px;
   padding: 10px 0;
   min-width: 200px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   z-index: 9999;
 }
 
@@ -125,18 +125,17 @@ header h1 {
 }
 
 .navlinks .submenu li a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: rgb(240, 232, 220);
-  font-size: 1.375rem;
+  color: #ffffff; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
   transition: background-color 0.3s ease, color 0.3s ease;
-  z-index: 1;
 }
 
 .navlinks .submenu li a:hover {
-  color: #00e1ff;
+  background-color: #c1076a;
+  color: #00e1ff 
 }
+
 
 
 .social-buttons {
