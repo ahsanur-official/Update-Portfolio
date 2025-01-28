@@ -222,3 +222,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+function toggleMenu() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navLinks = document.querySelector('.navlinks');
+
+  // Toggle the active class
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+}
+
+// Close the menu when a navigation link is clicked
+document.querySelectorAll('.navlinks a').forEach(link => {
+  link.addEventListener('click', () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.navlinks');
+
+    // Remove the active class
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  });
+});

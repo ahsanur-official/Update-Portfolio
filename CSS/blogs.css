@@ -18,9 +18,9 @@
 
 .blog-box {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Push content to top and bottom */
-    flex: 0 0 calc(33.33% - 20px);
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 calc(33.33% - 20px); /* Default: 3 blogs per row */
     margin: 10px;
     border-left: 4px solid #c1076a;
     border-radius: 10px;
@@ -58,25 +58,25 @@
     color: #007bff;
 }
 
+/* Blog Snippet */
 .blog-snippet {
     font-size: 1em;
     margin: 0 15px 15px;
     color: #555;
     line-height: 1.5;
-    display: -webkit-box; /* Required for line-clamp */
-    -webkit-line-clamp: 3; /* Show only 3 lines */
-    -webkit-box-orient: vertical; /* Required for line-clamp */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
+}
 
-  .blog-button {
+/* Blog Button */
+.blog-button {
     text-align: center;
-    margin-top: auto; /* Push it to the bottom of the container */
+    margin-top: auto;
     margin-bottom: 20px;
-  }
-  
+}
 
 .blog-button a {
     display: inline-block;
@@ -115,11 +115,13 @@
     background-color: #0056b3;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 /* Responsive Design */
+
+/* Tablet View - Show 2 blogs per row */
 @media (max-width: 1024px) {
     .blogs-slider-container {
         flex-wrap: wrap;
@@ -127,10 +129,11 @@ a{
     }
 
     .blog-box {
-        flex: 0 0 calc(50% - 20px);
+        flex: 0 0 calc(50% - 20px); /* Two blogs per row */
     }
 }
 
+/* Mobile View - Show 1 blog per row */
 @media (max-width: 768px) {
     .blogs-slider-container {
         flex-wrap: wrap;
@@ -138,6 +141,18 @@ a{
     }
 
     .blog-box {
-        flex: 0 0 100%;
+        flex: 0 0 100%; /* Full width for mobile view */
+    }
+}
+
+/* Mobile View - Two blogs per slide */
+@media (max-width: 768px) {
+    .blogs-slider-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .blog-box {
+        flex: 0 0 50%; /* Two blogs per slide */
     }
 }

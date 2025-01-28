@@ -125,15 +125,15 @@ header h1 {
 }
 
 .navlinks .submenu li a {
-  color: #ffffff; 
-  padding: 10px 15px; 
-  border-radius: 5px; 
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navlinks .submenu li a:hover {
   background-color: #c1076a;
-  color: #00e1ff 
+  color: #00e1ff
 }
 
 
@@ -188,4 +188,82 @@ header h1 {
 main {
   margin-top: 50px;
   padding: 20px;
+}
+
+
+
+/* Base styles for the hamburger menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #f4f4f9;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Rotate and transform lines to make an "X" when active */
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu behavior for small screens */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 70%; /* Take 70% of the width */
+    position: fixed; /* Fixed positioning to ensure it stays in place */
+    top: 80px;
+    right: 0; /* Align to the right side */
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    z-index: 999;
+}
+
+
+  .navlinks.active {
+    display: flex;
+  }
+
+  .navlinks>nav>ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navlinks>nav>ul>li {
+    margin: 10px 0;
+  }
+
+  .navlinks .submenu {
+    position: relative;
+    box-shadow: none;
+  }
+
+  .social-buttons {
+    margin-top: 20px;
+  }
 }

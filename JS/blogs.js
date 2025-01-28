@@ -4,22 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
 
-    const boxesPerSlide = 3;
-    const boxWidth = blogBoxes[0].offsetWidth + 20; // Including margin
+    const boxesPerSlide = 2; // Show 2 blogs per slide in mobile view
+    const boxWidth = blogBoxes[0].offsetWidth + 20; // Width of a blog box including margin
     let currentIndex = 0;
 
+    // Calculate the total number of slides (for 2 blogs per slide)
+    const totalSlides = Math.ceil(blogBoxes.length / boxesPerSlide);
+
+    // Update the slider position based on current index
     function updateSlider() {
-        const offset = -currentIndex * boxWidth;
+        const offset = -currentIndex * boxWidth * boxesPerSlide;  // Slide by 2 boxes at a time
         sliderContainer.style.transform = `translateX(${offset}px)`;
     }
 
+    // Show the next set of blogs (2 blogs at a time)
     nextBtn.addEventListener("click", function () {
-        if (currentIndex < blogBoxes.length - boxesPerSlide) {
+        if (currentIndex < totalSlides - 1) {
             currentIndex++;
             updateSlider();
         }
     });
 
+    // Show the previous set of blogs (2 blogs at a time)
     prevBtn.addEventListener("click", function () {
         if (currentIndex > 0) {
             currentIndex--;
@@ -27,28 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    const viewButtons = document.querySelectorAll(".view-content-btn");
-    const popup = document.getElementById("popup");
-    const popupText = document.getElementById("popup-text");
-    const closeBtn = document.querySelector(".close-btn");
-
-    viewButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const content = button.getAttribute("data-content");
-            if (content) {
-                popupText.textContent = content;
-                popup.style.display = "flex";
-            }
-        });
-    });
-
-    closeBtn.addEventListener("click", function () {
-        popup.style.display = "none";
-    });
-
-    popup.addEventListener("click", function (event) {
-        if (event.target === popup) {
-            popup.style.display = "none";
-        }
-    });
+    // Initialize the slider position
+    updateSlider();
 });
