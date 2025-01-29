@@ -5,6 +5,7 @@ body {
   overflow-x: hidden;
   background: linear-gradient(90deg, #0735a1, #c1076a);
   scroll-behavior: smooth;
+  background-size: cover;
 }
 
 header {
@@ -225,7 +226,6 @@ main {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Menu behavior for small screens */
 @media (max-width: 768px) {
   .hamburger-menu {
     display: flex;
@@ -235,20 +235,20 @@ main {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 70%; /* Take 70% of the width */
-    position: fixed; /* Fixed positioning to ensure it stays in place */
+    width: 100%;
+    position: fixed;
     top: 80px;
-    right: 0; /* Align to the right side */
+    right: 0;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     z-index: 999;
-}
-
+  }
 
   .navlinks.active {
     display: flex;
   }
 
+  /* Adjust the navigation list for vertical display */
   .navlinks>nav>ul {
     flex-direction: column;
     gap: 10px;
@@ -258,6 +258,7 @@ main {
     margin: 10px 0;
   }
 
+  /* Adjust submenu for mobile view */
   .navlinks .submenu {
     position: relative;
     box-shadow: none;
@@ -265,5 +266,16 @@ main {
 
   .social-buttons {
     margin-top: 20px;
+  }
+
+  /* To prevent any blue background shade */
+  body {
+    background: linear-gradient(90deg, #0735a1, #c1076a);
+    /* Keep the main body background consistent */
+  }
+
+  header {
+    background: linear-gradient(90deg, #0735a1, #c1076a);
+    /* Keep header background consistent */
   }
 }
