@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const tabLinks = document.querySelectorAll(".tab-link");
     const tabPanels = document.querySelectorAll(".tab-panel");
-    const serviceCards = document.querySelectorAll(".service-card"); // Ensure service cards are selected
+    const serviceCards = document.querySelectorAll(".service-card"); 
 
     function openTab(event, tabId) {
         // Remove active class from all tabs
         tabLinks.forEach((tab) => tab.classList.remove("active"));
         tabPanels.forEach((panel) => {
             panel.classList.remove("active");
-            panel.style.opacity = "0"; // Reset opacity for animation
-            panel.style.transform = "translateY(20px)"; // Reset position
-            panel.style.transition = "all 0.5s ease"; // Apply transition
+            panel.style.opacity = "0"; 
+            panel.style.transform = "translateY(20px)"; 
+            panel.style.transition = "all 0.5s ease";
         });
 
         // Add active class to clicked tab
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Show and animate the target panel
         targetPanel.classList.add("active");
         setTimeout(() => {
-            targetPanel.style.opacity = "1"; // Fade-in effect
-            targetPanel.style.transform = "translateY(0)"; // Smooth slide-in
+            targetPanel.style.opacity = "1"; 
+            targetPanel.style.transform = "translateY(0)"; 
         }, 0);
     }
 
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.3 } // Trigger animation when 30% of the element is visible
+        { threshold: 0.3 } 
     );
 
     // Apply observer to each service card
@@ -59,4 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
         card.style.transition = "all 0.5s ease";
         observer.observe(card);
     });
+});
+// Close popup when clicking the close button
+closeBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+    popup.style.display = "none";
+});
+
+// Close popup when clicking outside popup content
+popup.addEventListener("click", function (event) {
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
 });

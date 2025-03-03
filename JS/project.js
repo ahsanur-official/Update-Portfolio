@@ -9,20 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             const details = button.getAttribute("data-details");
             detailsText.textContent = details;
-            popup.style.display = "flex";
+            popup.style.display = "flex"; // Show the popup
         });
     });
 
     // Close popup when clicking the close button
     closeBtn.addEventListener("click", function (event) {
         event.stopPropagation(); // Prevent event bubbling
-        popup.style.display = "none";
+        popup.style.display = "none"; // Hide the popup
     });
 
-    // Close popup when clicking outside popup content
-    popup.addEventListener("click", function (event) {
-        if (event.target === popup) {
-            popup.style.display = "none";
-        }
-    });
+    
 });

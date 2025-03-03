@@ -87,66 +87,49 @@ footer {
 @media (max-width: 768px) {
     footer {
         width: 90%;
-        /* Increased width for better use of space */
         margin: 40px auto 0 auto;
-        /* Reduced top margin */
     }
 
     .footer-container {
         flex-direction: column;
-        /* Stack footer items vertically */
         text-align: center;
-        /* Center align text */
         padding: 20px;
-        /* Reduced padding */
         gap: 20px;
-        /* Reduced gap between items */
     }
 
     .footer-container div {
         min-width: 100%;
-        /* Full width for footer items */
     }
 
     .footer-links ul li {
         margin-bottom: 5px;
-        /* Reduced margin for list items */
     }
 
     .footer-bottom {
         font-size: 0.8em;
-        /* Smaller font size for bottom text */
     }
 }
 
-/* Styles for screens 480px and below */
 @media (max-width: 480px) {
     footer {
         width: 95%;
-        /* Full width for very small screens */
         margin: 30px auto 0 auto;
-        /* Further reduced top margin */
     }
 
     .footer-container {
         padding: 10px;
-        /* Further reduced padding */
         gap: 15px;
-        /* Further reduced gap between items */
     }
 
     .footer-links ul li {
         margin-bottom: 3px;
-        /* Further reduced margin for list items */
     }
 
     .footer-bottom {
         font-size: 0.7em;
-        /* Further reduced font size for bottom text */
     }
 
     .footer-social .social-icons li a {
         font-size: 1.2em;
-        /* Smaller icon size for social links */
     }
 }

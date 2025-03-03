@@ -88,7 +88,6 @@
     align-items: center;
     z-index: 1000;
     pointer-events: auto;
-    /* Ensure clicks are registered */
 }
 
 /* Popup Content */
@@ -101,7 +100,6 @@
     position: relative;
     text-align: center;
     pointer-events: auto;
-    /* Ensure child elements register clicks */
 }
 
 
@@ -126,40 +124,30 @@
 @media (max-width: 768px) {
     .projects {
         width: 90%;
-        /* Increased width for better use of space */
         margin-top: 20px;
-        /* Reduced top margin */
         margin-bottom: 20px;
-        /* Reduced bottom margin */
     }
 
     .projects-grid {
         grid-template-columns: repeat(1, 1fr);
-        /* Single column layout */
         gap: 20px;
-        /* Reduced gap between items */
     }
 
     .project-card {
         height: auto;
-        /* Allow height to adjust based on content */
     }
 
     .project-buttons .btn {
         font-size: 0.8em;
-        /* Smaller button font size */
         padding: 6px 10px;
-        /* Adjusted button padding */
     }
 
     .popup-content {
         padding: 15px;
-        /* Reduced padding for popup */
     }
 
     .details-text {
         font-size: 1em;
-        /* Smaller details text size */
     }
 }
 
@@ -167,27 +155,20 @@
 @media (max-width: 480px) {
     .projects {
         width: 95%;
-        /* Full width for very small screens */
         margin-top: 15px;
-        /* Further reduced top margin */
         margin-bottom: 15px;
-        /* Further reduced bottom margin */
     }
 
     .project-buttons .btn {
         font-size: 0.7em;
-        /* Further reduced button font size */
         padding: 5px 8px;
-        /* Further adjusted button padding */
     }
 
     .popup-content {
         padding: 10px;
-        /* Further reduced padding for popup */
     }
 
     .details-text {
         font-size: 0.9em;
-        /* Further reduced details text size */
     }
 }
