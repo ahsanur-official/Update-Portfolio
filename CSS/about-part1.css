@@ -168,18 +168,131 @@
     }
 }
 
-/* Responsive Design */
+/* Styles for screens 768px and below */
 @media (max-width: 768px) {
+    .about {
+        padding: 30px 0;
+        /* Adjust padding for smaller screens */
+    }
+
+    .about .row {
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 10px 5%;
+        /* Adjust padding for smaller screens */
+    }
+
+    .aboutImage img {
+        max-width: 100%;
+        /* Make image responsive */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .ahsanAbout {
+        width: 100%;
+        /* Full width for the text section */
+        text-align: center;
+        /* Center align text */
+    }
+
+    .ahsanAbout h1 {
+        font-size: 2rem;
+        /* Smaller heading font size */
+    }
+
+    .ahsanAbout h3 {
+        font-size: 1.3rem;
+        /* Smaller subheading font size */
+    }
+
+    .ahsanAbout p {
+        font-size: 1rem;
+        /* Smaller paragraph font size */
+    }
+
+    .theme-list li {
+        font-size: 1.2rem;
+        /* Smaller list item font size */
+    }
+
+    .about .btn {
+        padding: 10px 20px;
+        /* Adjust button padding */
+        font-size: 0.9rem;
+        /* Smaller button font size */
+    }
+
+    .tab-container {
+        width: 90%;
+        /* Increased width for better use of space */
+    }
+
     .tabs {
         flex-direction: column;
-        /* Stack tabs vertically on smaller screens */
+        /* Stack tabs vertically */
         align-items: center;
+        /* Center align tabs */
     }
 
     .tab-link {
-        flex: none;
         width: 100%;
+        /* Full width for tab links */
         font-size: 1.125rem;
         /* Slightly smaller font size */
+        padding: 15px;
+        /* Increase padding for better touch targets */
+    }
+
+    .tab-content {
+        padding: 15px;
+        /* Reduced padding for content */
+    }
+}
+
+/* Styles for screens 480px and below */
+@media (max-width: 480px) {
+    .about {
+        padding: 20px 0;
+        /* Further reduced padding */
+    }
+
+    .ahsanAbout h1 {
+        font-size: 1.8rem;
+        /* Further reduced heading font size */
+    }
+
+    .ahsanAbout h3 {
+        font-size: 1.2rem;
+        /* Further reduced subheading font size */
+    }
+
+    .ahsanAbout p {
+        font-size: 0.9rem;
+        /* Further reduced paragraph font size */
+    }
+
+    .theme-list li {
+        font-size: 1rem;
+        /* Further reduced list item font size */
+    }
+
+    .about .btn {
+        padding: 8px 15px;
+        /* Further adjusted button padding */
+        font-size: 0.8rem;
+        /* Further reduced button font size */
+    }
+
+    .tab-link {
+        font-size: 1rem;
+        /* Smaller font size for very small screens */
+        padding: 12px;
+        /* Slightly reduced padding for smaller screens */
+    }
+
+    .tab-content {
+        padding: 10px;
+        /* Further reduced padding for content */
     }
 }

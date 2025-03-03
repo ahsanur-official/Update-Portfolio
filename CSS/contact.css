@@ -142,3 +142,143 @@
     background: linear-gradient(90deg, #0735a1, #c1076a);
     transform: scale(1.05);
 }
+
+
+/* Styles for screens 768px and below */
+@media (max-width: 768px) {
+    .contact {
+        margin-top: 40px;
+        /* Reduced margin for smaller screens */
+    }
+
+    .contact .container {
+        width: 90%;
+        /* Increased width for better use of space */
+        padding: 10px;
+        /* Reduced padding */
+    }
+
+    .section-header h2 {
+        font-size: 2.5em;
+        /* Smaller font size for headings */
+    }
+
+    .section-header p {
+        font-size: 1rem;
+        /* Smaller paragraph font size */
+    }
+
+    .contact .row {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .contact-info {
+        width: 100%;
+        /* Full width for contact info */
+    }
+
+    .contact-info-item {
+        margin-bottom: 20px;
+        /* Reduced margin */
+    }
+
+    .contact-info-icon {
+        height: 50px;
+        /* Smaller icon size */
+        width: 50px;
+        /* Smaller icon size */
+    }
+
+    .contact-info-icon i {
+        font-size: 24px;
+        /* Smaller icon font size */
+    }
+
+    .contact-form {
+        width: 100%;
+        /* Full width for the form */
+        padding: 20px;
+        /* Reduced padding */
+    }
+
+    .contact-form h2 {
+        font-size: 1.5em;
+        /* Smaller form heading font size */
+    }
+
+    .contact-form .input-box input,
+    .contact-form .input-box textarea {
+        font-size: 14px;
+        /* Smaller input font size */
+    }
+
+    .contact-form .input-box span {
+        font-size: 14px;
+        /* Smaller label font size */
+    }
+
+    .contact-form .input-box input[type="submit"] {
+        font-size: 16px;
+        /* Smaller submit button font size */
+        padding: 10px;
+        /* Reduced padding */
+    }
+}
+
+/* Styles for screens 480px and below */
+@media (max-width: 480px) {
+    .contact .container {
+        width: 95%;
+        /* Full width for very small screens */
+        padding: 5px;
+        /* Further reduced padding */
+    }
+
+    .section-header h2 {
+        font-size: 2em;
+        /* Further reduced font size for headings */
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+        /* Further reduced paragraph font size */
+    }
+
+    .contact-info-icon {
+        height: 40px;
+        /* Further reduced icon size */
+        width: 40px;
+        /* Further reduced icon size */
+    }
+
+    .contact-info-icon i {
+        font-size: 20px;
+        /* Further reduced icon font size */
+    }
+
+    .contact-form h2 {
+        font-size: 1.2em;
+        /* Further reduced form heading font size */
+    }
+
+    .contact-form .input-box input,
+    .contact-form .input-box textarea {
+        font-size: 12px;
+        /* Further reduced input font size */
+    }
+
+    .contact-form .input-box span {
+        font-size: 12px;
+        /* Further reduced label font size */
+    }
+
+    .contact-form .input-box input[type="submit"] {
+        font-size: 14px;
+        /* Further reduced submit button font size */
+        padding: 8px;
+        /* Further reduced padding */
+    }
+}

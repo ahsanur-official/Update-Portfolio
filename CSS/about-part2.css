@@ -264,3 +264,146 @@
     background: rgba(255, 255, 255, 0.3);
     color: #ff4040;
 }
+
+/* Styles for screens 768px and below */
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 20px;
+        /* Reduced padding for smaller screens */
+    }
+
+    .skills-container h2 {
+        font-size: 1.5em;
+        /* Smaller font size for headings */
+    }
+
+    .skills-section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Adjust grid for smaller screens */
+    }
+
+    .skills-category {
+        padding: 15px;
+        /* Reduced padding */
+    }
+
+    .skill-item {
+        margin: 5px 0;
+        /* Reduced margin */
+    }
+
+    .skill-icon {
+        font-size: 1.2em;
+        /* Smaller icon size */
+    }
+
+    .skill-name {
+        font-size: 1em;
+        /* Smaller skill name font size */
+    }
+
+    .education-card,
+    .leadership-card {
+        padding: 15px;
+        /* Reduced padding */
+    }
+
+    .education-card h3,
+    .leadership-card h3 {
+        font-size: 1.2em;
+        /* Smaller heading font size */
+    }
+
+    .institution {
+        font-size: 12px;
+        /* Smaller institution font size */
+    }
+
+    .achievement-container {
+        flex-direction: column;
+        /* Stack achievements vertically */
+        align-items: center;
+        /* Center align achievements */
+    }
+
+    .achievement-box {
+        width: 90%;
+        /* Full width for smaller screens */
+        margin-bottom: 20px;
+        /* Space between boxes */
+    }
+
+    .details p {
+        font-size: 16px;
+        /* Smaller font size for details */
+    }
+
+    .btn {
+        font-size: 12px;
+        /* Smaller button font size */
+        padding: 8px 16px;
+        /* Adjust button padding */
+    }
+}
+
+/* Styles for screens 480px and below */
+@media (max-width: 480px) {
+    .skills-container h2 {
+        font-size: 1.2em;
+        /* Further reduced font size for headings */
+    }
+
+    .skills-section {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+    }
+
+    .skills-category {
+        padding: 10px;
+        /* Further reduced padding */
+    }
+
+    .skill-icon {
+        font-size: 1em;
+        /* Further reduced icon size */
+    }
+
+    .skill-name {
+        font-size: 0.9em;
+        /* Further reduced skill name font size */
+    }
+
+    .education-card,
+    .leadership-card {
+        padding: 10px;
+        /* Further reduced padding */
+    }
+
+    .education-card h3,
+    .leadership-card h3 {
+        font-size: 1em;
+        /* Further reduced heading font size */
+    }
+
+    .institution {
+        font-size: 10px;
+        /* Further reduced institution font size */
+    }
+
+    .achievement-box {
+        width: 100%;
+        /* Full width for very small screens */
+    }
+
+    .details p {
+        font-size: 14px;
+        /* Further reduced font size for details */
+    }
+
+    .btn {
+        font-size: 10px;
+        /* Further reduced button font size */
+        padding: 6px 12px;
+        /* Adjust button padding */
+    }
+}

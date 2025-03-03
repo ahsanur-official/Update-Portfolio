@@ -118,3 +118,105 @@
     transform: scale(1.05);
     box-shadow: 0px 6px 15px rgba(251, 0, 159, 0.526);
 }
+
+/* Styles for screens 768px and below */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 10px 5%;
+        /* Adjust padding for smaller screens */
+    }
+
+    .ahsan-info {
+        width: 100%;
+        /* Full width for the info section */
+        text-align: center;
+        /* Center align text */
+    }
+
+    .text-animate h2 {
+        font-size: 2rem;
+        /* Smaller font size for headings */
+    }
+
+    .ahsan-info p {
+        font-size: 1.2rem;
+        /* Smaller paragraph font size */
+    }
+
+    .home .btn {
+        font-size: 14px;
+        /* Smaller button font size */
+        padding: 8px 16px;
+        /* Adjust button padding */
+    }
+
+    .social-media {
+        justify-content: center;
+        /* Center align social media icons */
+    }
+
+    .bg-icon {
+        width: 40px;
+        /* Smaller icon size */
+        height: 40px;
+        /* Smaller icon size */
+    }
+
+    .bg-icon a {
+        font-size: 20px;
+        /* Smaller icon font size */
+    }
+
+    .img-ahsan img {
+        width: 300px;
+        /* Smaller image size */
+        height: 300px;
+        /* Smaller image size */
+    }
+}
+
+/* Styles for screens 480px and below */
+@media (max-width: 480px) {
+    .home {
+        padding: 10px 2%;
+        /* Further reduced padding */
+    }
+
+    .text-animate h2 {
+        font-size: 1.5rem;
+        /* Further reduced font size for headings */
+    }
+
+    .ahsan-info p {
+        font-size: 1rem;
+        /* Further reduced paragraph font size */
+    }
+
+    .home .btn {
+        font-size: 12px;
+        /* Further reduced button font size */
+        padding: 6px 12px;
+        /* Further adjusted button padding */
+    }
+
+    .bg-icon {
+        width: 35px;
+        /* Further reduced icon size */
+        height: 35px;
+        /* Further reduced icon size */
+    }
+
+    .bg-icon a {
+        font-size: 18px;
+        /* Further reduced icon font size */
+    }
+
+    .img-ahsan img {
+        width: 250px;
+        /* Further reduced image size */
+        height: 250px;
+        /* Further reduced image size */
+    }
+}

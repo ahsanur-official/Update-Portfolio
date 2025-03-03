@@ -279,3 +279,57 @@ main {
     /* Keep header background consistent */
   }
 }
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+    /* Reduce padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    /* Smaller font size for the title */
+  }
+
+  .navlinks>nav>ul>li a {
+    font-size: 0.9rem;
+    /* Smaller font size for nav links */
+    padding: 10px;
+    /* Adjust padding for touch targets */
+  }
+
+  .social-buttons a {
+    width: 30px;
+    /* Smaller size for social buttons */
+    height: 30px;
+    /* Smaller size for social buttons */
+  }
+
+  .social-buttons a .bxl-github,
+  .social-buttons a .bxl-linkedin {
+    font-size: 20px;
+    /* Smaller icon size */
+  }
+
+  .title h2 {
+    font-size: 1.5em;
+    /* Smaller font size for titles */
+  }
+
+  main {
+    padding: 10px;
+    /* Reduce padding in main content */
+  }
+
+  .hamburger-menu {
+    width: 25px;
+    /* Smaller hamburger menu */
+    height: 15px;
+    /* Smaller hamburger menu */
+  }
+
+  .hamburger-menu span {
+    height: 2px;
+    /* Thinner lines for hamburger */
+  }
+}

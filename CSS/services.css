@@ -58,12 +58,82 @@
 
 /* Hover Effect */
 .service-card:hover {
-    transform: translateY(-10px); /* Increased hover lift */
+    transform: translateY(-10px);
+    /* Increased hover lift */
     background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    /* Enhanced shadow */
 }
 
 
 .service-card:hover i {
     color: #0056b3;
+}
+
+
+/* Styles for screens 768px and below */
+@media (max-width: 768px) {
+    .services {
+        width: 90%;
+        /* Increased width for better use of space */
+        padding: 20px 10px;
+        /* Reduced padding */
+    }
+
+    .services .section-title {
+        font-size: 2em;
+        /* Smaller title font size */
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+        /* Single column layout */
+        gap: 20px;
+        /* Reduced gap between items */
+    }
+
+    .service-card {
+        padding: 15px;
+        /* Reduced padding in service cards */
+    }
+
+    .service-card h3 {
+        font-size: 1.4em;
+        /* Smaller heading font size */
+    }
+
+    .service-card p {
+        font-size: 0.9em;
+        /* Smaller paragraph font size */
+    }
+}
+
+/* Styles for screens 480px and below */
+@media (max-width: 480px) {
+    .services {
+        width: 95%;
+        /* Full width for very small screens */
+        padding: 15px 5px;
+        /* Further reduced padding */
+    }
+
+    .services .section-title {
+        font-size: 1.5em;
+        /* Further reduced title font size */
+    }
+
+    .service-card {
+        padding: 10px;
+        /* Further reduced padding in service cards */
+    }
+
+    .service-card h3 {
+        font-size: 1.2em;
+        /* Further reduced heading font size */
+    }
+
+    .service-card p {
+        font-size: 0.8em;
+        /* Further reduced paragraph font size */
+    }
 }
