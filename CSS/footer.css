@@ -92,7 +92,7 @@ footer {
 
     .footer-container {
         flex-direction: column;
-        text-align: center;
+        text-align: justify;
         padding: 20px;
         gap: 20px;
     }
