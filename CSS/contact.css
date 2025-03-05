@@ -151,7 +151,7 @@
 @media (max-width: 1024px) {
     .contact-info,
     .contact-form {
-        flex: 0 0 100%; /* Stack them on top of each other on medium screens */
+        flex: 0 0 80%; /* Stack them on top of each other on medium screens */
         padding: 20px;
     }
     .container2 {
@@ -163,7 +163,7 @@
 @media (max-width: 768px) {
     .contact-info,
     .contact-form {
-        flex: 0 0 100%; /* Full width for smaller screens */
+        flex: 0 0 80%; /* Full width for smaller screens */
         padding: 20px;
     }
     .title h2 {
@@ -174,7 +174,7 @@
 @media (max-width: 480px) {
     .contact-info,
     .contact-form {
-        flex: 0 0 100%; /* Full width for very small screens */
+        flex: 0 0 80%; /* Full width for very small screens */
         padding: 15px;
     }
 
