@@ -295,97 +295,89 @@ main {
   }
 }
 
-
 /* Mobile (480px and below) */
 @media (max-width: 480px) {
   .hamburger-menu {
-    display: flex;
+      display: flex;
   }
 
   header {
-    flex-direction: row;
-    /* Keep items in a row */
-    justify-content: space-between;
-    /* Space out logo, name, and menu */
-    padding: 10px;
-    height: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+      height: auto;
   }
 
   .image {
-    margin-left: 0;
-    width: 60px;
-    /* Adjust image width */
+      margin-left: 0;
+      width: 60px;
   }
 
   header h1 {
-    font-size: 1.5em;
-    text-align: left;
-    /* Align text to the left for better spacing */
+      font-size: 1.5em;
+      text-align: left;
   }
 
   .navlinks {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Align menu to the left */
-    width: auto;
-    position: fixed;
-    top: 80px;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    z-index: 999;
+      display: none; /* Hide the navigation initially */
+      flex-direction: column;
+      align-items: flex-start;
+      width: auto;
+      position: fixed;
+      top: 80px;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      z-index: 999;
+      transition: transform 0.3s ease-in-out;
   }
 
   .navlinks.active {
-    display: flex;
+      display: flex; /* Show the navigation when active */
   }
 
   .navlinks nav ul {
-    flex-direction: row;
-    /* Align menu items in a row */
-    gap: 15px;
-    /* Add spacing between menu items */
+      flex-direction: column; /* Stack menu items vertically */
+      gap: 15px;
   }
 
   .navlinks nav ul li {
-    margin: 0;
+      margin: 0;
   }
 
   .navlinks .submenu {
-    position: relative;
-    box-shadow: none;
+      position: relative;
+      box-shadow: none;
   }
 
   .social-buttons {
-    margin-top: 20px;
+      margin-top: 20px;
   }
 
-  /* Adjust social button size for mobile */
   .social-buttons a {
-    width: 30px;
-    height: 30px;
+      width: 30px;
+      height: 30px;
   }
 
   .social-buttons a .bxl-github,
   .social-buttons a .bxl-linkedin {
-    font-size: 20px;
+      font-size: 20px;
   }
 
   .title h2 {
-    font-size: 1.5em;
+      font-size: 1.5em;
   }
 
   main {
-    padding: 10px;
+      padding: 10px;
   }
 
   .hamburger-menu {
-    width: 25px;
-    height: 15px;
+      width: 25px;
+      height: 15px;
   }
 
   .hamburger-menu span {
-    height: 2px;
+      height: 2px;
   }
 }
