@@ -40,19 +40,26 @@
     text-align: center;
 }
 
+
 .contact-info p {
     font-size: 16px;
     line-height: 1.6;
     color: #666;
     margin: 10px 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 15px; /* Gap between icon and text */
+    gap: 10px;
+    text-align: justify;
 }
 
 .contact-info i {
     color: #00aaff;
     font-size: 24px; /* Icon size */
+}
+.contact-info a {
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-info a {
@@ -155,7 +162,7 @@
 @media (max-width: 1024px) {
     .contact-info,
     .contact-form {
-        flex: 0 0 80%; /* Stack them on top of each other on medium screens */
+        flex: 0 0 100%; /* Stack them on top of each other on medium screens */
         padding: 20px;
     }
     .container2 {
@@ -199,5 +206,17 @@
 
     .contact-form button {
         font-size: 16px;
+    }
+
+    .contact-info {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+    .contact-info i {
+        font-size: 20px;
     }
 }
