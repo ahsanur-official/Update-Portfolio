@@ -15,8 +15,11 @@
     padding: 10px 10%;
 }
 
+.img-ahsan{
+    margin-bottom: 15px;
+}
+
 .aboutImage img {
-    max-width: 300px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
