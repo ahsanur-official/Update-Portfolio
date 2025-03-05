@@ -1,37 +1,36 @@
-body {
+/* General Reset */
+* {
   margin: 0;
-  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Play", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
   overflow-x: hidden;
   background: linear-gradient(90deg, #0735a1, #c1076a);
-  scroll-behavior: smooth;
   background-size: cover;
 }
-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-}
 
-
+/* Header */
 header {
   width: 100%;
   display: flex;
   background: linear-gradient(90deg, #0735a1, #c1076a);
   color: rgb(240, 232, 220);
   position: fixed;
-  z-index: 1;
-  width: 100%;
   top: 0;
   left: 0;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
   transition: top 0.3s ease-in-out;
-  margin-bottom: 200px;
-  overflow: visible;
-
+  z-index: 1000;
 }
 
+/* Logo & Image */
 header .image {
   width: 25%;
   float: left;
@@ -51,35 +50,33 @@ header .image {
 
 header h1 {
   float: left;
-  display: flex;
   width: 50%;
   color: rgb(240, 232, 220);
-  justify-content: center;
+  text-align: center;
 }
 
+/* Navigation */
 .navlinks {
   display: flex;
-  width: 60%;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
+  width: 60%;
   margin-right: 36px;
 }
 
-.navlinks>nav>ul {
+.navlinks nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
   margin: 0;
   padding: 0;
 }
 
-.navlinks>nav>ul>li {
+.navlinks nav ul li {
   position: relative;
   margin: 0 20px;
 }
 
-.navlinks>nav>ul>li a {
+.navlinks nav ul li a {
   color: #f4f4f9;
   text-decoration: none;
   font-size: 1.375rem;
@@ -90,7 +87,7 @@ header h1 {
   z-index: 1;
 }
 
-.navlinks>nav>ul>li a::after {
+.navlinks nav ul li a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -101,16 +98,17 @@ header h1 {
   transition: width 0.3s ease;
 }
 
-.navlinks>nav>ul>li:hover>a {
+.navlinks nav ul li:hover a {
   color: #00e1ff;
   z-index: 10;
   transform: scale(1.1);
 }
 
-.navlinks>nav>ul>li a:hover::after {
+.navlinks nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Dropdown Menu */
 .navlinks .submenu {
   display: none;
   position: absolute;
@@ -121,6 +119,7 @@ header h1 {
   min-width: 200px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .navlinks .has-submenu:hover .submenu {
@@ -135,18 +134,17 @@ header h1 {
   color: #ffffff;
   padding: 10px 15px;
   border-radius: 5px;
+  display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navlinks .submenu li a:hover {
   background-color: #c1076a;
-  color: #00e1ff
+  color: #00e1ff;
 }
 
-
-
+/* Social Media Buttons */
 .social-buttons {
-  width: 25%;
   display: flex;
   justify-content: flex-end;
   gap: 15px;
@@ -169,7 +167,6 @@ header h1 {
   transform: scale(1.1);
 }
 
-
 .social-buttons a .bxl-github {
   font-size: 35px;
 }
@@ -183,6 +180,7 @@ header h1 {
   color: #005582;
 }
 
+/* Titles */
 .title h2 {
   margin-top: 0;
   text-align: center;
@@ -192,14 +190,13 @@ header h1 {
   margin-bottom: 20px;
 }
 
+/* Main Section */
 main {
   margin-top: 80px;
   padding: 20px;
 }
 
-
-
-/* Base styles for the hamburger menu */
+/* Hamburger Menu */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -219,7 +216,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-/* Rotate and transform lines to make an "X" when active */
+/* Hamburger Menu Animation */
 .hamburger-menu.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -232,22 +229,39 @@ main {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Responsive Design */
+
+/* Tablet (768px and below) */
 @media (max-width: 768px) {
   .hamburger-menu {
     display: flex;
   }
 
   header {
-    flex-direction: column;
+    flex-direction: row;
+    /* Align items in a row */
+    justify-content: space-between;
+    /* Add space between logo, name, and menu */
     padding: 10px;
     height: auto;
+  }
+
+  .image {
+    margin-left: 0;
+    width: auto;
+    /* Adjust image width to fit */
+  }
+
+  header h1 {
+    font-size: 1.5em;
   }
 
   .navlinks {
     display: none;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    align-items: flex-start;
+    /* Align menu to the left */
+    width: auto;
     position: fixed;
     top: 80px;
     right: 0;
@@ -260,17 +274,84 @@ main {
     display: flex;
   }
 
-  /* Adjust the navigation list for vertical display */
-  .navlinks>nav>ul {
+  .navlinks nav ul {
+    flex-direction: row;
+    /* Align menu items in a row */
+    gap: 15px;
+    /* Add spacing between menu items */
+  }
+
+  .navlinks nav ul li {
+    margin: 0;
+  }
+
+  .navlinks .submenu {
+    position: relative;
+    box-shadow: none;
+  }
+
+  .social-buttons {
+    margin-top: 20px;
+  }
+}
+
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  header {
+    flex-direction: row;
+    /* Keep items in a row */
+    justify-content: space-between;
+    /* Space out logo, name, and menu */
+    padding: 10px;
+    height: auto;
+  }
+
+  .image {
+    margin-left: 0;
+    width: 60px;
+    /* Adjust image width */
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    text-align: left;
+    /* Align text to the left for better spacing */
+  }
+
+  .navlinks {
+    display: none;
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
+    /* Align menu to the left */
+    width: auto;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    z-index: 999;
   }
 
-  .navlinks>nav>ul>li {
-    margin: 10px 0;
+  .navlinks.active {
+    display: flex;
   }
 
-  /* Adjust submenu for mobile view */
+  .navlinks nav ul {
+    flex-direction: row;
+    /* Align menu items in a row */
+    gap: 15px;
+    /* Add spacing between menu items */
+  }
+
+  .navlinks nav ul li {
+    margin: 0;
+  }
+
   .navlinks .submenu {
     position: relative;
     box-shadow: none;
@@ -280,30 +361,7 @@ main {
     margin-top: 20px;
   }
 
-  /* To prevent any blue background shade */
-  body {
-    background: linear-gradient(90deg, #0735a1, #c1076a);
-  }
-
-  header {
-    background: linear-gradient(90deg, #0735a1, #c1076a);
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding: 10px;
-  }
-
-  header h1 {
-    font-size: 1.5em;
-  }
-
-  .navlinks>nav>ul>li a {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-
+  /* Adjust social button size for mobile */
   .social-buttons a {
     width: 30px;
     height: 30px;
