@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Contact Section */
 .contact {
     width: 80%;
@@ -161,9 +165,13 @@
 }
 
 @media (max-width: 768px) {
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+    }
     .contact-info,
     .contact-form {
-        flex: 0 0 80%; /* Full width for smaller screens */
+        flex: 0 0 100%; /* Full width for smaller screens */
         padding: 20px;
     }
     .title h2 {
@@ -172,9 +180,8 @@
 }
 
 @media (max-width: 480px) {
-    .contact-info,
-    .contact-form {
-        flex: 0 0 80%; /* Full width for very small screens */
+    .contact-info, .contact-form {
+        width: 100%;
         padding: 15px;
     }
 
