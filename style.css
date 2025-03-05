@@ -36,7 +36,6 @@ header .image {
   float: left;
   display: flex;
   width: 100px;
-  margin-left: 20px;
 }
 
 .image img {
@@ -61,7 +60,7 @@ header h1 {
   align-items: center;
   justify-content: flex-start;
   width: 60%;
-  margin-right: 36px;
+  margin-right: 22px;
 }
 
 .navlinks nav ul {
