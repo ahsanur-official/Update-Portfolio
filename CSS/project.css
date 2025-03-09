@@ -76,8 +76,8 @@
 }
 
 /* Popup Overlay */
-.popup-overlay {
-    display: none;
+.popup-overlay2 {
+    display: none; /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
@@ -87,11 +87,13 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    pointer-events: auto;
+    pointer-events: none; /* Prevents clicking the overlay while the popup is hidden */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out transition */
 }
 
 /* Popup Content */
-.popup-content {
+.popup-content2 {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -99,12 +101,13 @@
     width: 90%;
     position: relative;
     text-align: center;
-    pointer-events: auto;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-30px); /* Start with a slight upward shift */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth appearance animation */
 }
 
-
 /* Close Button */
-.close-btn {
+.close-btn2 {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -114,11 +117,30 @@
 }
 
 /* Details Text */
-.details-text {
+.details-text2 {
     font-size: 1.2em;
     color: #333;
 }
 
+/* Show popup */
+.popup-overlay2.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto; /* Enable pointer events when shown */
+}
+
+.popup-content2.show {
+    opacity: 1;
+    transform: translateY(0); /* Bring the popup content into view */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 480px) {
+    .popup-content2 {
+        width: 90%; /* Ensure popup doesn't take up full width on small screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
 
 /* Styles for screens 768px and below */
 @media (max-width: 768px) {
