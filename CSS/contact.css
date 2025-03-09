@@ -24,13 +24,17 @@
 }
 
 /* 📍 Contact Info */
+.contact-form{
+    background-color: #fff;
+
+}
+
+
 .contact-info,
 .contact-form {
-    flex: 0 0 42%;
-    /* Default width on larger screens */
+    flex: 1;
     width: 100%;
     padding: 30px;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -43,15 +47,15 @@
 .contact-info h4,
 .contact-form h3 {
     font-size: 28px;
-    color: #333;
+    color: rgb(240, 232, 220);
     margin-bottom: 20px;
     text-align: center;
 }
 
-.contact-info p {
+.contact-info p, .contact-info p a {
     font-size: 16px;
     line-height: 1.6;
-    color: #666;
+    color: rgb(240, 232, 220);
     margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +67,6 @@
 .contact-info i {
     color: #00aaff;
     font-size: 24px;
-    /* Icon size */
 }
 
 .contact-info a {
@@ -169,7 +172,7 @@
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-    .contact{
+    .contact {
         width: 95%;
     }
 
@@ -186,9 +189,10 @@
 }
 
 @media (max-width: 768px) {
-    .contact{
+    .contact {
         width: 95%;
     }
+
     .container2 {
         flex-direction: column;
         align-items: center;
@@ -203,7 +207,7 @@
 
 @media (max-width: 480px) {
 
-    .contact{
+    .contact {
         width: 95%;
     }
 
