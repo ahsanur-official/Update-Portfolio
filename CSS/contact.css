@@ -1,457 +1,238 @@
 * {
-
     box-sizing: border-box;
-
 }
-
-
 
 /* Contact Section */
-
 .contact {
-
     width: 80%;
-
     margin: 0 auto;
-
     padding: 50px 0 30px 0;
-
 }
-
-
 
 .section-header {
-
     text-align: center;
-
     margin-bottom: 30px;
-
 }
-
-
 
 .container2 {
-
     display: flex;
-
     flex-wrap: wrap;
-
     justify-content: space-between;
-
     gap: 30px;
-
     width: 100%;
-
+    /* Ensure the container takes full width */
 }
-
-
 
 /* 📍 Contact Info */
-
 .contact-info,
-
 .contact-form {
-
-    flex: 1;
-
+    flex: 0 0 42%;
+    /* Default width on larger screens */
     width: 100%;
-
-    /* Ensure it spans full width initially */
-
     padding: 30px;
-
     background-color: #fff;
-
     border-radius: 8px;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
     display: flex;
-
     flex-direction: column;
-
     gap: 20px;
-
+    min-height: 400px;
+    /* Adds a minimum height to prevent collapsing */
 }
-
-
 
 .contact-info h4,
-
 .contact-form h3 {
-
     font-size: 28px;
-
     color: #333;
-
     margin-bottom: 20px;
-
     text-align: center;
-
 }
-
-
 
 .contact-info p {
-
     font-size: 16px;
-
     line-height: 1.6;
-
     color: #666;
-
     margin: 10px 0;
-
     display: flex;
-
     flex-wrap: wrap;
-
     align-items: center;
-
     gap: 10px;
-
     text-align: justify;
-
 }
-
-
 
 .contact-info i {
-
     color: #00aaff;
-
     font-size: 24px;
-
+    /* Icon size */
 }
 
-
-
 .contact-info a {
-
     word-break: break-word;
-
     overflow-wrap: break-word;
-
 }
-
-
 
 .contact-info a {
-
     color: #00aaff;
-
     text-decoration: none;
-
 }
-
-
 
 .contact-info a:hover {
-
     text-decoration: underline;
-
 }
-
-
 
 /* Icon hover effect for emphasis */
-
 .contact-info i:hover {
-
     color: #c1076a;
-
     transition: color 0.3s ease;
-
 }
-
-
 
 /* Styling for phone and email for better readability */
-
 .contact-info .phone-links a,
-
 .contact-info .email-links a {
-
     display: block;
-
 }
-
-
 
 .contact-info .phone-links a,
-
 .contact-info .email-links a {
-
     font-size: 16px;
-
     color: #00aaff;
-
     margin: 5px 0;
-
 }
-
-
 
 .contact-info .phone-links a:hover,
-
 .contact-info .email-links a:hover {
-
     text-decoration: underline;
-
 }
-
-
 
 .contact-info p:last-child {
-
     font-style: italic;
-
     color: #777;
-
 }
-
-
 
 /* ✉️ Contact Form */
-
 .contact-form {
-
     padding: 30px;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
     border-radius: 8px;
-
+    min-height: 400px;
+    /* Ensures the form doesn’t collapse */
 }
-
-
 
 .contact-form h3 {
-
     font-size: 30px;
-
     color: #333;
-
     margin-bottom: 20px;
-
 }
-
-
 
 .contact-form .form-group {
-
     margin-bottom: 15px;
-
 }
-
-
 
 .contact-form label {
-
     font-size: 16px;
-
     color: #333;
-
     margin-bottom: 8px;
-
     display: block;
-
 }
-
-
 
 .contact-form .form-control {
-
     width: 100%;
-
     padding: 12px;
-
     font-size: 16px;
-
     border-radius: 8px;
-
     border: 2px solid #ccc;
-
     margin-bottom: 15px;
-
     box-sizing: border-box;
-
 }
-
-
 
 .contact-form .form-control:focus {
-
     border: 2px solid #c1076a;
-
     outline: none;
-
 }
-
-
 
 .contact-form button {
-
     width: 100%;
-
     padding: 14px;
-
     background: linear-gradient(90deg, #0735a1, #c1076a);
-
     border: none;
-
     color: #fff;
-
     font-size: 18px;
-
     border-radius: 8px;
-
     cursor: pointer;
-
     transition: all 0.3s ease-in-out;
-
 }
-
-
 
 .contact-form button:hover {
-
     transform: scale(1.05);
-
     background: linear-gradient(90deg, #c1076a, #0735a1);
-
 }
-
-
 
 /* Responsive Styles */
-
 @media (max-width: 1024px) {
 
-
-
     .contact-info,
-
     .contact-form {
-
         flex: 0 0 100%;
-
         padding: 20px;
-
     }
-
-
 
     .container2 {
-
         flex-direction: column;
-
+        gap: 20px;
         width: 100%;
-
+        /* Ensure full width */
     }
-
 }
-
-
 
 @media (max-width: 768px) {
-
     .container2 {
-
         flex-direction: column;
-
         align-items: center;
-
     }
-
-
 
     .contact-info,
-
     .contact-form {
-
         flex: 0 0 80%;
-
         padding: 20px;
-
     }
-
 }
-
-
 
 @media (max-width: 480px) {
 
-
-
     .contact-info,
-
     .contact-form {
-
-        width: 100%;
-
-        /* Ensure full width on small screens */
-
+        width: 80%;
         padding: 15px;
-
+        max-width: 100%;
+        /* Ensures no overflow */
     }
-
-
 
     .title h2 {
-
         font-size: 24px;
-
     }
-
-
 
     .contact-form h3 {
-
         font-size: 24px;
-
     }
-
-
 
     .contact-form .form-control {
-
         font-size: 14px;
-
     }
-
-
 
     .contact-form button {
-
         font-size: 16px;
-
     }
-
-
 
     .contact-info {
-
-        width: 100%;
-
+        max-width: 100%;
         word-wrap: break-word;
-
     }
-
-
 
     .contact-info p {
-
         font-size: 14px;
-
     }
-
-
 
     .contact-info i {
-
         font-size: 20px;
-
     }
-
 }
