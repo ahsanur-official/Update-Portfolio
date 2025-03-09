@@ -169,6 +169,9 @@
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
+    .contact{
+        width: 95%;
+    }
 
     .contact-info,
     .contact-form {
@@ -178,13 +181,14 @@
 
     .container2 {
         flex-direction: column;
-        gap: 20px;
         width: 100%;
-        /* Ensure full width */
     }
 }
 
 @media (max-width: 768px) {
+    .contact{
+        width: 95%;
+    }
     .container2 {
         flex-direction: column;
         align-items: center;
@@ -199,12 +203,15 @@
 
 @media (max-width: 480px) {
 
+    .contact{
+        width: 95%;
+    }
+
     .contact-info,
     .contact-form {
-        width: 80%;
+        width: 100%;
         padding: 15px;
         max-width: 100%;
-        /* Ensures no overflow */
     }
 
     .title h2 {
