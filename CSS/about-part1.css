@@ -12,11 +12,7 @@
     align-items: center;
     padding: 10px 10%;
     gap: 20px;
-    justify-content: space-around;
-}
-
-.img-ahsan {
-    margin-bottom: 15px;
+    justify-content: space-between;
 }
 
 .aboutImage {
@@ -25,21 +21,148 @@
 }
 
 .aboutImage img {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     object-fit: cover;
+    opacity: 0.5;
 }
 
 .aboutImage img:hover {
     transform: scale(1.05);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    opacity: 1; /* When hovered, it will become fully opaque */
+}
+
+
+.about-container {
+    text-align: center;
+    color: white;
+    position: relative;
+    margin: 0 auto;
+}
+
+.developer {
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    display: inline-block;
+    animation: typing 4s steps(30) forwards, blink 0.7s infinite;
+    color: rgb(240, 232, 220);
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.51);
+}
+
+.laptop {
+    width: 350px;
+    height: 200px;
+    background: #333;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    position: relative;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    padding: 10px;
+    overflow: hidden;
+    text-align: left;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: #00ff00;
+    margin-left: 2px;
+    animation: blink 0.5s infinite;
+}
+
+.floating-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    opacity: 0.8;
+    animation: float 3s infinite ease-in-out;
+}
+
+.icon.html {
+    color: #e34c26;
+}
+
+.icon.css {
+    color: #264de4;
+    animation-delay: 0.5s;
+}
+
+.icon.js {
+    color: #f7df1e;
+    animation-delay: 1s;
+}
+
+.dev-avatar {
+    font-size: 60px;
+    animation: headMove 2s infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes headMove {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
 }
 
 .ahsanAbout {
-    width: 55%;
+    width: 60%;
     text-align: left;
 }
 
@@ -286,10 +409,9 @@
 
     .aboutImage {
         max-width: 35%;
-        /* Adjust for better proportion */
     }
 
     .ahsanAbout {
-        width: 55%;
+        width: 60%;
     }
 }
