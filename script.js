@@ -243,3 +243,4 @@ document.querySelectorAll('.navlinks a').forEach(link => {
     navLinks.classList.remove('active');
   });
 });
+
